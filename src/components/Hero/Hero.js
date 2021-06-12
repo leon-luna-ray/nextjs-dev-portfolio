@@ -1,19 +1,25 @@
 import React from 'react';
 
-import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
+import {
+  Section,
+  SectionText,
+  SectionTitle,
+} from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection } from './HeroStyles';
 
-const Hero = (props) => (
+const Hero = props => (
   <>
     <Section row nopadding>
       <LeftSection>
         <SectionTitle main center>
-          Welcome To <br />
-          My Personal Portfolio
+          Ray Luna <br />
+          Developer Portfolio
         </SectionTitle>
         <SectionText>
-        The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
+          I am a full-stack web developer using my skills to create useful
+          human-centric web applications with an emphasis on ease of use and
+          simple design.
         </SectionText>
         <Button onClick={props.handleClick}>Learn More</Button>
       </LeftSection>
