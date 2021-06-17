@@ -21,15 +21,15 @@ import {
 import { projects } from '../../constants/constants';
 
 const Projects = () => (
-  <Section nopadding id='projects'>
+  <Section id='projects'>
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
       {projects.map((project) => (
         <div className='project-card'>
-          {project.title}
+          <h2>{project.title}</h2>
           <br />
-          {project.description}
+          <p>{project.description}</p>
         </div>
       ))}
     </GridContainer>
