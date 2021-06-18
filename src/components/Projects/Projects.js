@@ -26,13 +26,27 @@ const Projects = () => (
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
       {projects.map(
-        ({ title, description, image, tags, source, visit, github, id }) => (
+        // de-structure project object to get needed properties
+        ({ title, description, image, tags, link, github, id }) => (
           <BlogCard key={id} className='project-card'>
             <Img src={image} />
             <TitleContent>
               <HeaderThree title>{title}</HeaderThree>
+              <Hr />
             </TitleContent>
-            <p>{description}</p>
+            <CardInfo>{description}</CardInfo>
+            <div>
+              <TitleContent>Technologies</TitleContent>
+              <TagList>
+                {tags.map((tag, i) => (
+                  <Tag key={i}>{tag}</Tag>
+                ))}
+              </TagList>
+            </div>
+            <UtilityList>
+              <ExternalLinks href={github}>GitHub</ExternalLinks>
+              <ExternalLinks href={link}>Launch App 🚀</ExternalLinks>
+            </UtilityList>
           </BlogCard>
         )
       )}
