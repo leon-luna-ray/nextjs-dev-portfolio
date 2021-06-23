@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaReact, FaDatabase, FaCodeBranch } from 'react-icons/fa';
+import { CgWebsite } from 'react-icons/cg';
 import {
   Section,
   SectionDivider,
@@ -17,11 +18,13 @@ import {
 const Technologies = () => (
   <Section id='technologies'>
     <SectionDivider />
+    <br />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>I create apps with these technologies</SectionText>
     <List>
       <ListItem>
-        <FaReact size='3rem' />
+        <CgWebsite size='3rem' />
+        <br />
         <ListContainer>
           <ListTitle>Front End</ListTitle>
           <ListParagraph>
@@ -37,6 +40,8 @@ const Technologies = () => (
       </ListItem>
       <ListItem>
         <FaDatabase size='3rem' />
+        <br />
+
         <ListContainer>
           <ListTitle>Back End</ListTitle>
           <ListParagraph>
@@ -51,14 +56,15 @@ const Technologies = () => (
       <ListItem>
         <ListContainer>
           <FaCodeBranch size='3rem' />
+          <br />
           <ListTitle>Tools</ListTitle>
           <ListParagraph>
             <ul>
+              <li>Git</li>
               <li>Bootstrap</li>
               <li>Materialize</li>
               <li>Firebase</li>
               <li>Handlebars</li>
-              <li>MERN Stack</li>
             </ul>
           </ListParagraph>
         </ListContainer>
@@ -66,6 +72,7 @@ const Technologies = () => (
       {/* Need to find a way to add a 4th column */}
       {/* <ListItem>
         <DiFirebase size='3rem' />
+        <br />
         <ListContainer>
           <ListTitle>Skills</ListTitle>
           <ListParagraph>
