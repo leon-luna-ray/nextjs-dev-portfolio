@@ -23,28 +23,44 @@ const Technologies = () => (
       <ListItem>
         <DiFirebase size='3rem' />
         <ListContainer>
-          <ListTitle>Front-End</ListTitle>
+          <ListTitle>Front End</ListTitle>
           <ListParagraph>
-            HTML5 
-            CSS3 
-            JavaScript 
-            jQuery 
-            React.js
+            <ul className='skills-list'>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>jQuery</li>
+            </ul>
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
         <DiFirebase size='3rem' />
         <ListContainer>
-          <ListTitle>Back-End</ListTitle>
-          <ListParagraph></ListParagraph>
+          <ListTitle>Back End</ListTitle>
+          <ListParagraph>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+            <li></li>
+          </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
         <DiFirebase size='3rem' />
         <ListContainer>
           <ListTitle>Tools</ListTitle>
-          <ListParagraph></ListParagraph>
+          <ListParagraph>
+            <ul>
+              <li>Bootstrap</li>
+              <li>Materialize</li>
+              <li>Firebase</li>
+              <li>Handlebars</li>
+              <li>MERN Stack</li>
+            </ul>
+          </ListParagraph>
         </ListContainer>
       </ListItem>
     </List>
