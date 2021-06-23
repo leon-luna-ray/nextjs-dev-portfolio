@@ -1,6 +1,7 @@
 import React from 'react';
-import { FaReact, FaDatabase, FaCodeBranch } from 'react-icons/fa';
+import { FaCodeBranch } from 'react-icons/fa';
 import { CgWebsite } from 'react-icons/cg';
+import { HiOutlineDatabase } from 'react-icons/hi';
 import {
   Section,
   SectionDivider,
@@ -20,7 +21,9 @@ const Technologies = () => (
     <SectionDivider />
     <br />
     <SectionTitle>Technologies</SectionTitle>
-    <SectionText>I create apps with these technologies</SectionText>
+    <SectionText>
+      I create apps with a range of front-end and back-end technologies
+    </SectionText>
     <List>
       <ListItem>
         <CgWebsite size='3rem' />
@@ -39,7 +42,7 @@ const Technologies = () => (
         </ListContainer>
       </ListItem>
       <ListItem>
-        <FaDatabase size='3rem' />
+        <HiOutlineDatabase size='3rem' />
         <br />
 
         <ListContainer>
