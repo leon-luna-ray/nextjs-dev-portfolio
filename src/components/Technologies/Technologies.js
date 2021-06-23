@@ -1,5 +1,5 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { FaReact, FaDatabase, FaCodeBranch } from 'react-icons/fa';
 import {
   Section,
   SectionDivider,
@@ -21,7 +21,7 @@ const Technologies = () => (
     <SectionText>I create apps with these technologies</SectionText>
     <List>
       <ListItem>
-        <DiFirebase size='3rem' />
+        <FaReact size='3rem' />
         <ListContainer>
           <ListTitle>Front End</ListTitle>
           <ListParagraph>
@@ -36,7 +36,7 @@ const Technologies = () => (
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiFirebase size='3rem' />
+        <FaDatabase size='3rem' />
         <ListContainer>
           <ListTitle>Back End</ListTitle>
           <ListParagraph>
@@ -49,8 +49,8 @@ const Technologies = () => (
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiFirebase size='3rem' />
         <ListContainer>
+          <FaCodeBranch size='3rem' />
           <ListTitle>Tools</ListTitle>
           <ListParagraph>
             <ul>
