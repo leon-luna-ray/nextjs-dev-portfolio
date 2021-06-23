@@ -29,6 +29,9 @@ const Timeline = () => {
         Oregon metro area. My hobbies are camping, hiking, birdwatching,
         cooking, language, travel and photography.
       </SectionText>
+      <br />
+      <SectionDivider />
+      <br />
     </Section>
   );
 };
