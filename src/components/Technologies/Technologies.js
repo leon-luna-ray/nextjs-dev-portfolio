@@ -20,6 +20,8 @@ const Technologies = () => (
   <Section id='technologies'>
     <SectionDivider />
     <br />
+    <br />
+    <br />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
       I create apps with a range of front-end and back-end technologies
