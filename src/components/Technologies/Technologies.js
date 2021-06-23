@@ -63,6 +63,22 @@ const Technologies = () => (
           </ListParagraph>
         </ListContainer>
       </ListItem>
+      {/* Need to find a way to add a 4th column */}
+      {/* <ListItem>
+        <DiFirebase size='3rem' />
+        <ListContainer>
+          <ListTitle>Skills</ListTitle>
+          <ListParagraph>
+            <ul>
+              <li>MERN</li>
+              <li>MVC</li>
+              <li>PWA</li>
+              <li>Testing</li>
+              <li>WebAPIs</li>
+            </ul>
+          </ListParagraph>
+        </ListContainer>
+      </ListItem> */}
     </List>
   </Section>
 );
