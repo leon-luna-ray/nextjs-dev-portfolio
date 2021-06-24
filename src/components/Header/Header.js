@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub, AiFillLinkedin, AiTwotoneMail } from 'react-icons/ai';
+import {
+  AiFillGithub,
+  AiFillLinkedin,
+  AiTwotoneMail,
+  AiOutlineCode,
+} from 'react-icons/ai';
 import { TiCode } from 'react-icons/ti';
 
 import {
@@ -18,7 +23,7 @@ const Header = () => (
     <Div1>
       <Link href='/'>
         <a style={{ display: 'flex', alignItems: 'center', color: 'white' }}>
-          <TiCode size='4rem' /> <Span> Ray Luna</Span>
+          <AiOutlineCode size='4rem' /> <Span> Ray Luna</Span>
         </a>
       </Link>
     </Div1>

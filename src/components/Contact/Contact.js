@@ -25,12 +25,15 @@ const Contact = () => (
       </Box>
       <Box>
         <BoxText>Linkedin</BoxText>
+        <BoxText>leon-luna-ray</BoxText>
       </Box>
       <Box>
         <BoxText>Email</BoxText>
+        <BoxText>leon.luna.ray@gmail.com</BoxText>
       </Box>
       <Box>
         <BoxText>Resume</BoxText>
+        <BoxText>Download</BoxText>
       </Box>
     </Boxes>
   </Section>
