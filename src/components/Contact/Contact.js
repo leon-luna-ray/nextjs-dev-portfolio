@@ -15,11 +15,13 @@ const data = [
 ];
 
 const Contact = () => (
+  // Add click event to the individual box
   <Section id='contact'>
     <SectionTitle>Contact</SectionTitle>
     <Boxes>
-      <Box>
+      <Box id='github'>
         <BoxText>Github</BoxText>
+        <BoxText>leon-luna-ray</BoxText>
       </Box>
       <Box>
         <BoxText>Linkedin</BoxText>
