@@ -36,6 +36,7 @@ const Contact = () => (
         <BoxText>Download</BoxText>
       </Box>
     </Boxes>
+    <br />
   </Section>
 );
 

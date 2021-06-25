@@ -45,7 +45,7 @@ const Projects = () => (
             </div>
             <UtilityList>
               <ExternalLinks href={github}>GitHub</ExternalLinks>
-              <ExternalLinks href={link}>Launch App 🚀</ExternalLinks>
+              <ExternalLinks href={link}>Launch 🚀</ExternalLinks>
             </UtilityList>
           </BlogCard>
         )

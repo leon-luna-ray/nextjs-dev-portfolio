@@ -1,26 +1,13 @@
 import React from 'react';
 
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiTwotoneMail,
-  AiOutlineCode,
-} from 'react-icons/ai';
-
-import {
-  CompanyContainer,
-  FooterWrapper,
-  LinkColumn,
-  LinkItem,
-  LinkList,
-  LinkTitle,
-  Slogan,
-  SocialContainer,
-  SocialIconsContainer,
-} from './FooterStyles';
+import { FooterText, FooterWrapper } from './FooterStyles';
 
 const Footer = () => {
-  return <FooterWrapper>Ray Luna 2021</FooterWrapper>;
+  return (
+    <FooterWrapper>
+      <FooterText>© Ray Luna 2021</FooterText>
+    </FooterWrapper>
+  );
 };
 
 export default Footer;
