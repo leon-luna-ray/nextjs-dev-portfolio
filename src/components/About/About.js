@@ -30,7 +30,9 @@ const Timeline = () => {
         cooking, language, travel and photography.
       </SectionText>
       <br />
+      <br />
       <SectionDivider />
+      <br />
       <br />
     </Section>
   );

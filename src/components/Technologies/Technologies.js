@@ -89,7 +89,9 @@ const Technologies = () => (
       </ListItem> */}
     </List>
     <br />
+    <br />
     <SectionDivider />
+    <br />
     <br />
   </Section>
 );
