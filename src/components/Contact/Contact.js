@@ -40,11 +40,13 @@ const Contact = () => {
             <BoxText>leon.luna.ray@gmail.com</BoxText>
           </Box>
         </a>
-        <Box>
-          <TiDocumentText size='5rem' />
-          <BoxText>Resume</BoxText>
-          <BoxText>Download</BoxText>
-        </Box>
+        <a href='./pdf/06-15-dev-resume.pdf' download='luna-ray-resume'>
+          <Box>
+            <TiDocumentText size='5rem' />
+            <BoxText>Resume</BoxText>
+            <BoxText>Download</BoxText>
+          </Box>
+        </a>
       </Boxes>
       <br />
     </Section>
