@@ -15,33 +15,31 @@ const links = {
   resume: 'Download',
 };
 const Contact = () => {
-  // Add click event to the individual box as a link to each and deploy.
-  const handleClick = (e) => {
-    e.preventDefault();
-    console.log('click!');
-  };
-
   return (
     <Section id='contact'>
       <SectionTitle>Contact</SectionTitle>
       <Boxes>
-        <a href='' target='_blank'>
+        <a href={links.github} target='_blank'>
           <Box id='github-box'>
             <AiFillGithub size='5rem' />
             <BoxText>Github</BoxText>
             <BoxText>leon-luna-ray</BoxText>
           </Box>
         </a>
-        <Box>
-          <AiFillLinkedin size='5rem' />
-          <BoxText>Linkedin</BoxText>
-          <BoxText>leon-luna-ray</BoxText>
-        </Box>
-        <Box>
-          <AiTwotoneMail size='5rem' />
-          <BoxText>Email</BoxText>
-          <BoxText>leon.luna.ray@gmail.com</BoxText>
-        </Box>
+        <a href={links.linkedin} target='_blank'>
+          <Box>
+            <AiFillLinkedin size='5rem' />
+            <BoxText>Linkedin</BoxText>
+            <BoxText>leon-luna-ray</BoxText>
+          </Box>
+        </a>
+        <a href={links.email} target='_blank'>
+          <Box>
+            <AiTwotoneMail size='5rem' />
+            <BoxText>Email</BoxText>
+            <BoxText>leon.luna.ray@gmail.com</BoxText>
+          </Box>
+        </a>
         <Box>
           <TiDocumentText size='5rem' />
           <BoxText>Resume</BoxText>
