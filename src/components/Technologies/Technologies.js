@@ -60,7 +60,7 @@ const Technologies = () => {
         <ListItem>
           <ListContainer>
             <ToolsDiv>
-              <FaCodeBranch size='3rem' />
+              <FaCodeBranch size='2.99rem' />
             </ToolsDiv>
             <ListTitle>Tools</ListTitle>
             <ListParagraph>
