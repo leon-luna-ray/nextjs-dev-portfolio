@@ -12,22 +12,23 @@ const Timeline = () => {
     <Section id='about'>
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        I'm Ray. I am a Full-stack web developer. I use my new skills to create
-        useful human-centric web applications with an emphasis on ease of use
-        and simple design. I recently earned my certificate in full stack
-        development from the University of Oregon Coding Bootcamp.
+        Hi I'm Ray! I am a Full-stack web developer. I use my new skills to
+        create useful human-centric web applications with an emphasis on ease of
+        use and simple design.
       </SectionText>
       <SectionText>
         The reason I got into coding is because find it allows me to constantly
         challenge myself. I love to learn and I'm always looking for something
         new to expand my knowledge that I can apply to find real-world
         solutions. I have an interest in both front-end and back-end
-        development, learning new languages and technologies.
+        development, learning new languages and technologies. I recently earned
+        my certificate in full stack development from the University of Oregon
+        Coding Bootcamp.
       </SectionText>
       <SectionText>
-        Originally from Mexicali, Mexico and currently living in the Portland,
-        Oregon metro area. My hobbies are camping, hiking, birdwatching,
-        cooking, language, travel and photography.
+        I'm from Mexicali, Mexico and grew up living in the Portland, Oregon
+        Metro Area. My hobbies are camping, hiking, birdwatching, cooking,
+        language, travel and photography.
       </SectionText>
       <br />
       <br />
