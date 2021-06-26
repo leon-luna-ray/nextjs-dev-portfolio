@@ -13,26 +13,31 @@ const data = [
 
 const Contact = () => {
   // Add click event to the individual box as a link to each and deploy.
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log('click!');
+  };
+
   return (
     <Section id='contact'>
       <SectionTitle>Contact</SectionTitle>
       <Boxes>
-        <Box>
+        <Box id='github-box' onClick={handleClick}>
           <AiFillGithub size='5rem' />
           <BoxText>Github</BoxText>
           <BoxText>leon-luna-ray</BoxText>
         </Box>
-        <Box>
+        <Box onClick={handleClick}>
           <AiFillLinkedin size='5rem' />
           <BoxText>Linkedin</BoxText>
           <BoxText>leon-luna-ray</BoxText>
         </Box>
-        <Box>
+        <Box onClick={handleClick}>
           <AiTwotoneMail size='5rem' />
           <BoxText>Email</BoxText>
           <BoxText>leon.luna.ray@gmail.com</BoxText>
         </Box>
-        <Box>
+        <Box onClick={handleClick}>
           <TiDocumentText size='5rem' />
           <BoxText>Resume</BoxText>
           <BoxText>Download</BoxText>
