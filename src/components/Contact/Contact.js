@@ -26,22 +26,22 @@ const Contact = () => {
     <Section id='contact'>
       <SectionTitle>Contact</SectionTitle>
       <Boxes>
-        <Box id='github-box' onClick={handleClick}>
+        <Box id='github-box'>
           <AiFillGithub size='5rem' />
           <BoxText>Github</BoxText>
           <BoxText>leon-luna-ray</BoxText>
         </Box>
-        <Box onClick={handleClick}>
+        <Box>
           <AiFillLinkedin size='5rem' />
           <BoxText>Linkedin</BoxText>
           <BoxText>leon-luna-ray</BoxText>
         </Box>
-        <Box onClick={handleClick}>
+        <Box>
           <AiTwotoneMail size='5rem' />
           <BoxText>Email</BoxText>
           <BoxText>leon.luna.ray@gmail.com</BoxText>
         </Box>
-        <Box onClick={handleClick}>
+        <Box>
           <TiDocumentText size='5rem' />
           <BoxText>Resume</BoxText>
           <BoxText>Download</BoxText>
