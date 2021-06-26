@@ -14,6 +14,8 @@ import {
   ListItem,
   ListParagraph,
   ListTitle,
+  ImageContainer,
+  ToolsDiv,
 } from './TechnologiesStyles';
 
 const Technologies = () => {
@@ -57,8 +59,9 @@ const Technologies = () => {
         </ListItem>
         <ListItem>
           <ListContainer>
-            <FaCodeBranch size='3rem' />
-            <br />
+            <ToolsDiv>
+              <FaCodeBranch size='3rem' />
+            </ToolsDiv>
             <ListTitle>Tools</ListTitle>
             <ListParagraph>
               <ul>
@@ -71,24 +74,10 @@ const Technologies = () => {
             </ListParagraph>
           </ListContainer>
         </ListItem>
-        {/* Need to find a way to add a 4th column */}
-        {/* <ListItem>
-        <DiFirebase size='3rem' />
-        <br />
-        <ListContainer>
-          <ListTitle>Skills</ListTitle>
-          <ListParagraph>
-            <ul>
-              <li>MERN</li>
-              <li>MVC</li>
-              <li>PWA</li>
-              <li>Testing</li>
-              <li>WebAPIs</li>
-            </ul>
-          </ListParagraph>
-        </ListContainer>
-      </ListItem> */}
       </List>
+      <br />
+      <br />
+      <br />
       <br />
       <br />
       <SectionDivider />

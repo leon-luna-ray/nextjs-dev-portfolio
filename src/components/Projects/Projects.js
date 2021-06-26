@@ -62,6 +62,8 @@ const Projects = () => {
       <SectionDivider />
       <br />
       <br />
+      <br />
+      <br />
     </Section>
   );
 };

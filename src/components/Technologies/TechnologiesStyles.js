@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+// Offset icon margin to match to others
+export const ToolsDiv = styled.div`
+  margin-bottom: 0.3em;
+`;
+
 export const ImageContainer = styled.div`
   text-align: center;
   background-image: radial-gradient(
