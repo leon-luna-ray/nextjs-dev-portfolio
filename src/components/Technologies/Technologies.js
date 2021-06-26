@@ -16,62 +16,63 @@ import {
   ListTitle,
 } from './TechnologiesStyles';
 
-const Technologies = () => (
-  <Section id='technologies'>
-    <SectionTitle>Technologies</SectionTitle>
-    <SectionText>
-      I create apps with a range of front-end and back-end technologies
-    </SectionText>
-    <List>
-      <ListItem>
-        <CgWebsite size='3rem' />
-        <br />
-        <ListContainer>
-          <ListTitle>Front End</ListTitle>
-          <ListParagraph>
-            <ul className='skills-list'>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-              <li>React.js</li>
-              <li>jQuery</li>
-            </ul>
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-      <ListItem>
-        <HiOutlineDatabase size='3rem' />
-        <br />
-
-        <ListContainer>
-          <ListTitle>Back End</ListTitle>
-          <ListParagraph>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-            <li></li>
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-      <ListItem>
-        <ListContainer>
-          <FaCodeBranch size='3rem' />
+const Technologies = () => {
+  return (
+    <Section id='technologies'>
+      <SectionTitle>Technologies</SectionTitle>
+      <SectionText>
+        I create apps with a range of front-end and back-end technologies
+      </SectionText>
+      <List>
+        <ListItem>
+          <CgWebsite size='3rem' />
           <br />
-          <ListTitle>Tools</ListTitle>
-          <ListParagraph>
-            <ul>
-              <li>Git</li>
-              <li>Bootstrap</li>
-              <li>Materialize</li>
-              <li>Firebase</li>
-              <li>Handlebars</li>
-            </ul>
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-      {/* Need to find a way to add a 4th column */}
-      {/* <ListItem>
+          <ListContainer>
+            <ListTitle>Front End</ListTitle>
+            <ListParagraph>
+              <ul className='skills-list'>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>jQuery</li>
+              </ul>
+            </ListParagraph>
+          </ListContainer>
+        </ListItem>
+        <ListItem>
+          <HiOutlineDatabase size='3rem' />
+          <br />
+
+          <ListContainer>
+            <ListTitle>Back End</ListTitle>
+            <ListParagraph>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li></li>
+            </ListParagraph>
+          </ListContainer>
+        </ListItem>
+        <ListItem>
+          <ListContainer>
+            <FaCodeBranch size='3rem' />
+            <br />
+            <ListTitle>Tools</ListTitle>
+            <ListParagraph>
+              <ul>
+                <li>Git</li>
+                <li>Bootstrap</li>
+                <li>Materialize</li>
+                <li>Firebase</li>
+                <li>Handlebars</li>
+              </ul>
+            </ListParagraph>
+          </ListContainer>
+        </ListItem>
+        {/* Need to find a way to add a 4th column */}
+        {/* <ListItem>
         <DiFirebase size='3rem' />
         <br />
         <ListContainer>
@@ -87,13 +88,14 @@ const Technologies = () => (
           </ListParagraph>
         </ListContainer>
       </ListItem> */}
-    </List>
-    <br />
-    <br />
-    <SectionDivider />
-    <br />
-    <br />
-  </Section>
-);
+      </List>
+      <br />
+      <br />
+      <SectionDivider />
+      <br />
+      <br />
+    </Section>
+  );
+};
 
 export default Technologies;
