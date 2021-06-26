@@ -1,7 +1,11 @@
 import React from 'react';
 import { AiFillGithub, AiFillLinkedin, AiTwotoneMail } from 'react-icons/ai';
 import { TiDocumentText } from 'react-icons/ti';
-import { Section, SectionTitle } from '../../styles/GlobalComponents';
+import {
+  ExternalLinks,
+  Section,
+  SectionTitle,
+} from '../../styles/GlobalComponents';
 import { Box, Boxes, BoxText } from './ContactStyles';
 
 const data = [

@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsCode } from 'react-icons/bs';
 
 import {
   BlogCard,
@@ -36,6 +37,7 @@ const Projects = () => {
                 <Hr />
               </TitleContent>
               <CardInfo>{description}</CardInfo>
+              <br />
               <div>
                 <TitleContent>Technologies</TitleContent>
                 <TagList>
@@ -45,8 +47,12 @@ const Projects = () => {
                 </TagList>
               </div>
               <UtilityList>
-                <ExternalLinks href={github}>GitHub</ExternalLinks>
-                <ExternalLinks href={link}>Launch 🚀</ExternalLinks>
+                <ExternalLinks href={link} target='_blank'>
+                  🚀Launch App
+                </ExternalLinks>
+                <ExternalLinks href={github} target='_blank'>
+                  👨🏻‍💻 Code
+                </ExternalLinks>
               </UtilityList>
             </BlogCard>
           )

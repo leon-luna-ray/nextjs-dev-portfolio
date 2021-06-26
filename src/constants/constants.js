@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'Social Butterfly Messenger',
+    title: 'Social Butterfly',
     description:
       'This is a messenger app for keeping in touch with friends and family and to me new people! This app allows the user to create an account, search users by username and add new contacts. The public chat allows each user to communicate with other members of the Social Butterfly Community. This app is built on a serverless architecture using React and Firebase.',
     image: '/images/social-butterfly.png',
@@ -11,10 +11,10 @@ export const projects = [
   },
   {
     title: 'RecipeBook',
-    description:
-      'An online recipe book to view sand save your favorite recipes. This is a Heroku app built using Node.js, Express, Handlebars, Sequelize, Passport and Materialize. The application allows the user to create an account, add recipes, view recipes, search stored recipes and print the recipe.',
+    description: `An online recipe book app that allows the user to view sand save their favorite recipes. It is a Heroku app built using Node.js, Express.js, Handlebars, Sequelize, Passport and Materialize. The application allows the user to create an account with a email and password, add their personal recipes, view saved recipes, search for stored recipes and print the recipe in a book page format.
+    `,
     image: '/images/recipe-book.png',
-    tags: ['MySQL', 'Handlebars', 'Materialize', 'JavaScript'],
+    tags: ['Node.js', 'MySQL', 'Handlebars', 'Materialize', 'JavaScript'],
     link: 'https://arcane-peak-55315.herokuapp.com/',
     github: 'https://github.com/kurtp23/recipe-book',
     id: 1,
