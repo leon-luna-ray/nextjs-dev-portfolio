@@ -18,15 +18,14 @@ const Timeline = () => {
       </SectionText>
       <SectionText>
         The reason I got into coding is because find it allows me to constantly
-        challenge myself. I love to learn and I'm always looking for something
-        new to expand my knowledge that I can apply to find real-world
-        solutions. I have an interest in both front-end and back-end
-        development, learning new languages and technologies. I recently earned
-        my certificate in full stack development from the University of Oregon
-        Coding Bootcamp.
+        challenge myself. I love to learn and I am always looking for something
+        new to expand my knowledge and inspire me to create new apps. I have an
+        interest in both front-end and back-end development, learning new
+        languages and technologies. I recently earned my certificate in full
+        stack development from the University of Oregon Coding Bootcamp.
       </SectionText>
       <SectionText>
-        I'm from Mexicali, Mexico and grew up living in the Portland, Oregon
+        I am from Mexicali, Mexico, I grew up living in the Portland, Oregon
         Metro Area. My hobbies are camping, hiking, birdwatching, cooking,
         language, travel and photography.
       </SectionText>
