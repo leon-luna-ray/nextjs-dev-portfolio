@@ -1,5 +1,4 @@
 import React from 'react';
-import { BsCode } from 'react-icons/bs';
 
 import {
   BlogCard,

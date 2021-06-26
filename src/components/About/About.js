@@ -8,6 +8,8 @@ import {
 } from '../../styles/GlobalComponents';
 
 const Timeline = () => {
+  // Final addition of profile picture will go in the about section. Project will then be ready for deployment.
+  // Clean up code and comments after this is complete.
   return (
     <Section id='about'>
       <SectionTitle>About Me</SectionTitle>
