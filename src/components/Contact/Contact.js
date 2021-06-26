@@ -8,13 +8,12 @@ import {
 } from '../../styles/GlobalComponents';
 import { Box, Boxes, BoxText } from './ContactStyles';
 
-const data = [
-  { title: 'Github', contact: 'https://github.com/leon-luna-ray' },
-  { title: 'Linkedin', contact: 'https://www.linkedin.com/in/leon-luna-ray/' },
-  { title: 'Email', contact: 'leon.luna.ray@gmail.com' },
-  { title: 'Resume', contact: 'Download' },
-];
-
+const links = {
+  github: 'https://github.com/leon-luna-ray',
+  linkedin: 'https://www.linkedin.com/in/leon-luna-ray/',
+  email: 'mailto:leon.luna.ray@gmail.com',
+  resume: 'Download',
+};
 const Contact = () => {
   // Add click event to the individual box as a link to each and deploy.
   const handleClick = (e) => {
@@ -26,11 +25,13 @@ const Contact = () => {
     <Section id='contact'>
       <SectionTitle>Contact</SectionTitle>
       <Boxes>
-        <Box id='github-box'>
-          <AiFillGithub size='5rem' />
-          <BoxText>Github</BoxText>
-          <BoxText>leon-luna-ray</BoxText>
-        </Box>
+        <a href='' target='_blank'>
+          <Box id='github-box'>
+            <AiFillGithub size='5rem' />
+            <BoxText>Github</BoxText>
+            <BoxText>leon-luna-ray</BoxText>
+          </Box>
+        </a>
         <Box>
           <AiFillLinkedin size='5rem' />
           <BoxText>Linkedin</BoxText>
