@@ -27,8 +27,8 @@ const Timeline = () => {
         challenge myself. I love to learn and I am always looking for something
         new to expand my knowledge and inspire me to create new apps. I have an
         interest in both front-end and back-end development, learning new
-        languages and technologies. I recently earned my certificate in full
-        stack development from the University of Oregon Coding Bootcamp.
+        languages and technologies. I recently earned my certificate in
+        full-stack development from the University of Oregon Coding Bootcamp.
       </SectionText>
       <SectionText>
         I am from Mexicali, Mexico, I grew up living in the Portland, Oregon

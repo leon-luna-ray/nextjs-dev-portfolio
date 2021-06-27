@@ -31,6 +31,8 @@ const Projects = () => {
           ({ title, description, image, tags, link, github, id }) => (
             <BlogCard key={id} className='project-card'>
               <Img src={image} />
+              <br />
+              <br />
               <TitleContent>
                 <HeaderThree title>{title}</HeaderThree>
                 <Hr />
