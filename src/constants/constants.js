@@ -44,7 +44,7 @@ export const projects = [
     description:
       'A command line application for busy bosses to quickly render a styled team HTML page for quick access! The app will prompt the end-user for their contact information as well as their team data. Once complete the app will generate a team.html file in the output folder containing everyone on the team. The app is built with Node.js with a focus on testing using Jest.',
     image: '/images/team-profile.png',
-    tags: ['Node.js', 'Inquirer', 'Jest'],
+    tags: ['Node.js', 'Bulma', 'HTML', 'Inquirer', 'Jest'],
     link: 'https://www.youtube.com/watch?v=_9L0reNTwvs',
     github: 'https://github.com/leon-luna-ray/team-profile-generator',
     id: 4,
