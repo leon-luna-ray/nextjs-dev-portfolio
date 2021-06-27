@@ -14,6 +14,7 @@ const Timeline = () => {
     <Section id='about'>
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
+        <img src='/images/ray-1x1.jpg' />
         Hi I'm Ray! I am a Full-stack web developer. I use my new skills to
         create useful human-centric web applications with an emphasis on ease of
         use and simple design.
