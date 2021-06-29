@@ -23,7 +23,9 @@ import { projects } from '../../constants/constants';
 const Projects = () => {
   return (
     <Section id='projects'>
+      <br />
       <SectionDivider />
+      <br />
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>
         {projects.map(
@@ -62,8 +64,6 @@ const Projects = () => {
       <br />
       <br />
       <SectionDivider />
-      <br />
-      <br />
       <br />
       <br />
     </Section>

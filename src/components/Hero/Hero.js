@@ -10,7 +10,7 @@ import { LeftSection } from './HeroStyles';
 
 const Hero = () => {
   return (
-    <Section row nopading>
+    <Section row nopadding>
       <LeftSection>
         <SectionTitle main center>
           Ray Luna <br />

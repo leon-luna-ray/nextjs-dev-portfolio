@@ -2,7 +2,9 @@
 
 ## Description
 
-This is my current web developer portfolio for my website rayluna.me. This is a one page layout that includes a collection of my best projects, tech skills, a bio and contact inforation. This portfolio is built with React.js and Next.js and theme by [JavaScript Mastery](https://github.com/adrianhajdin/portfolio_website).
+This is my current web developer portfolio for my website [rayluna.me](https://www.rayluna.me). This portfolio is built with React.js and Next.js with theme by [JavaScript Mastery](https://github.com/adrianhajdin/portfolio_website). The app is deployed via Netlify. This is a one page layout that includes a collection of my best projects, tech skills, a bio and contact information.
+
+[🚀 Launch](https://www.rayluna.me)
 
 ## Table of Contents
 
@@ -25,14 +27,15 @@ This is my current web developer portfolio for my website rayluna.me. This is a 
 - Javascript
 - Font Awesome
 - React-Icons
+- Netlify
 
 ## Known-Bugs
 
-Some of the nav links are sometimes not responsive when clicked repeatedly but they work after a few tries.
+Some of the nav links are sometimes not responsive when clicked repeatedly but they work after a few tries. Minor styling bugs on smaller screens.
 
 ## Next-Steps
 
-Styling changes and a contact form.
+Styling changes for mobile view and a contact form.
 
 ## License
 

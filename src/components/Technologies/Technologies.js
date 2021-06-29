@@ -27,9 +27,9 @@ const Technologies = () => {
       </SectionText>
       <List>
         <ListItem>
-          <CgWebsite size='3rem' />
-          <br />
           <ListContainer>
+            <CgWebsite size='3rem' />
+            <br />
             <ListTitle>Front End</ListTitle>
             <ListParagraph>
               <ul className='skills-list'>
@@ -43,10 +43,9 @@ const Technologies = () => {
           </ListContainer>
         </ListItem>
         <ListItem>
-          <HiOutlineDatabase size='3rem' />
-          <br />
-
           <ListContainer>
+            <HiOutlineDatabase size='3rem' />
+            <br />
             <ListTitle>Back End</ListTitle>
             <ListParagraph>
               <li>Node.js</li>
@@ -59,9 +58,8 @@ const Technologies = () => {
         </ListItem>
         <ListItem>
           <ListContainer>
-            <ToolsDiv>
-              <FaCodeBranch size='2.99rem' />
-            </ToolsDiv>
+            <FaCodeBranch size='3rem' />
+            <br />
             <ListTitle>Tools</ListTitle>
             <ListParagraph>
               <ul>
@@ -75,9 +73,6 @@ const Technologies = () => {
           </ListContainer>
         </ListItem>
       </List>
-      <br />
-      <br />
-      <br />
       <br />
       <br />
       <SectionDivider />
