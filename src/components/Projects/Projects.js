@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   BlogCard,
   CardInfo,
@@ -51,7 +50,7 @@ const Projects = () => {
               </div>
               <UtilityList>
                 <ExternalLinks href={link} target='_blank'>
-                  🚀Launch App
+                  🚀 Launch
                 </ExternalLinks>
                 <ExternalLinks href={github} target='_blank'>
                   👨🏻‍💻 Code

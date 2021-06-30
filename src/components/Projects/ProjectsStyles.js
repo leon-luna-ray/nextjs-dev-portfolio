@@ -73,14 +73,15 @@ export const UtilityList = styled.ul`
 `;
 
 export const ExternalLinks = styled.a`
-  color: #d4c0c0;
+  color: white;
   font-size: 1.6rem;
   padding: 1rem 1.5rem;
-  background: ##6188ff;
+  background: #2d236b;
   border-radius: 15px;
   transition: 0.5s;
   &:hover {
-    background: #801414;
+    color: black;
+    background: #ffde4a;
   }
 `;
 
