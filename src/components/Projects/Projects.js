@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   BlogCard,
   CardInfo,
@@ -53,7 +54,7 @@ const Projects = () => {
                   🚀 Launch
                 </ExternalLinks>
                 <ExternalLinks href={github} target='_blank'>
-                  👨🏻‍💻 Code
+                  Code
                 </ExternalLinks>
               </UtilityList>
             </BlogCard>
