@@ -2,7 +2,7 @@ export default {
   // Temp fonts, decide if change is needed once content is complete
   fonts: {
     title: 'Poppins, sans-serif',
-    main: 'Poppins, sans-serif',
+    main: 'Ruleway, sans-serif',
   },
   // Colors for layout
   colors: {
