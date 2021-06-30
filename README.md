@@ -35,7 +35,9 @@ Some of the nav links are sometimes not responsive when clicked repeatedly but t
 
 ## Next-Steps
 
-Styling changes for mobile view and a contact form.
+- Styling changes for mobile view
+- Add form to contact section
+- Render contact buttons dynamically
 
 ## License
 
@@ -53,6 +55,6 @@ If you have any questions about the repo, open an issue or contact me directly a
 
 ## Links
 
-- [Deployed Project](https://rayluna.me)
+- [Deployed Project](https://www.rayluna.me)
 
 - [Project Repository](https://github.com/leon-luna-ray/readme-generator)

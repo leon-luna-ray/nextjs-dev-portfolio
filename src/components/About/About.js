@@ -8,15 +8,14 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 
-const Timeline = () => {
-  // Final addition of profile picture will go in the about section. Project will then be ready for deployment.
-  // Clean up code and comments after this is complete.
+const About = () => {
   return (
     <Section id='about'>
       <SectionTitle>About Me</SectionTitle>
       <br />
       <br />
       <SectionText>
+        {/* Personal profile image */}
         <Img src='/images/ray-1x1.jpg' />
         Hi I'm Ray! I am a Full-stack web developer. I use my new skills to
         create useful human-centric web applications with an emphasis on ease of
@@ -44,4 +43,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline;
+export default About;

@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
+// Icons for social links and logo
 import {
   AiFillGithub,
   AiFillLinkedin,
   AiTwotoneMail,
   AiOutlineCode,
 } from 'react-icons/ai';
-import { TiCode } from 'react-icons/ti';
 
 import {
   Container,

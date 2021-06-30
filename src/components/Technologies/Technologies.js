@@ -14,8 +14,6 @@ import {
   ListItem,
   ListParagraph,
   ListTitle,
-  ImageContainer,
-  ToolsDiv,
 } from './TechnologiesStyles';
 
 const Technologies = () => {
@@ -23,7 +21,7 @@ const Technologies = () => {
     <Section id='technologies'>
       <SectionTitle>Technologies</SectionTitle>
       <SectionText>
-        I create apps with a range of front-end and back-end technologies
+        I create apps with a range of front-end and back-end technologies.
       </SectionText>
       <List>
         <ListItem>

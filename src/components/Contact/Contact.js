@@ -1,11 +1,8 @@
 import React from 'react';
+// icons for buttons
 import { AiFillGithub, AiFillLinkedin, AiTwotoneMail } from 'react-icons/ai';
 import { TiDocumentText } from 'react-icons/ti';
-import {
-  ExternalLinks,
-  Section,
-  SectionTitle,
-} from '../../styles/GlobalComponents';
+import { Section, SectionTitle } from '../../styles/GlobalComponents';
 import { Box, Boxes, BoxText } from './ContactStyles';
 
 const links = {
@@ -14,6 +11,8 @@ const links = {
   email: 'mailto:leon.luna.ray@gmail.com',
   resume: 'Download',
 };
+
+// Future steps to load the buttons dynamically
 const Contact = () => {
   return (
     <Section id='contact'>
