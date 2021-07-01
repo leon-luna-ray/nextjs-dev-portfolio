@@ -11,7 +11,7 @@ export const projects = [
   },
   {
     title: 'RecipeBook',
-    description: `An online recipe book app that allows the user to view and save their favorite recipes. The application allows the user to create an account with a email address and password, add their personal recipes, view saved recipes, search for saved recipes and print the recipe in a book page format. It is a full-stack Heroku app built using Node.js, Express.js, Handlebars, Sequelize, Passport and Materialize. The app was built by a team of three developers.
+    description: `An online recipe book app that allows the user to view and save their favorite recipes. The application allows the user to create an account with a email address and password, add their personal recipes, view saved recipes, search for saved recipes and print the recipe in a book page format. It is a full-stack Heroku app built using Node.js, Express.js, Handlebars, Sequelize, Passport and Materialize.
     `,
     image: '/images/recipe-book.png',
     tags: ['Node.js', 'MySQL', 'Handlebars', 'Materialize'],
