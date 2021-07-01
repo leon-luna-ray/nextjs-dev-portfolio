@@ -11,7 +11,7 @@ export const projects = [
   },
   {
     title: 'RecipeBook',
-    description: `An online recipe book app that allows the user to view and save their favorite recipes. It is a Heroku app built using Node.js, Express.js, Handlebars, Sequelize, Passport and Materialize. The application allows the user to create an account with a email and password, add their personal recipes, view saved recipes, search for saved recipes and print the recipe in a book page format.
+    description: `An online recipe book app that allows the user to view and save their favorite recipes. The application allows the user to create an account with a email address and password, add their personal recipes, view saved recipes, search for saved recipes and print the recipe in a book page format. It is a full-stack Heroku app built using Node.js, Express.js, Handlebars, Sequelize, Passport and Materialize. The app was built by a team of three developers.
     `,
     image: '/images/recipe-book.png',
     tags: ['Node.js', 'MySQL', 'Handlebars', 'Materialize'],
@@ -32,7 +32,7 @@ export const projects = [
   {
     title: 'Eatdaburger',
     description:
-      'A fun burger ordering app! The user can order any burger they like. The burger will be saved in their burger queue and moved to the devoured side when the user clicks eat-da-burger! This is a Heroku app built with Node.js and Handlebars.',
+      'A fun burger ordering app! The user can order any burger they like. The burger will be saved in the burger queue and moved to the devoured side when the user clicks eat-da-burger! This is a full-stack Heroku app built with Node.js and Handlebars.',
     image: '/images/eatdaburger.png',
     tags: ['Handlebars', 'MySQL', 'Node.Js', 'Express.js'],
     link: 'https://burger-app-rluna.herokuapp.com/',
