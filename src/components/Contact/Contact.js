@@ -9,7 +9,7 @@ const links = {
   github: 'https://github.com/leon-luna-ray',
   linkedin: 'https://www.linkedin.com/in/leon-luna-ray/',
   email: 'mailto:leon.luna.ray@gmail.com',
-  resume: 'Download',
+  resume: './pdf/07-02-ray-luna-resume.pdf',
 };
 
 // Future steps to load the buttons dynamically
@@ -39,7 +39,7 @@ const Contact = () => {
             <BoxText>leon.luna.ray@gmail.com</BoxText>
           </Box>
         </a>
-        <a href='./pdf/06-15-dev-resume.pdf' download='luna-ray-resume'>
+        <a href={links.resume} download='ray-luna-resume'>
           <Box>
             <TiDocumentText size='5rem' />
             <BoxText>Resume</BoxText>
