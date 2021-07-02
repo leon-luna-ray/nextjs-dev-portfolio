@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Social Butterfly',
     description:
-      'This is a messenger app for keeping in touch with friends, family and new people! The app allows the user to create an account, search users by username and add new contacts. The public chat allows each user to communicate with other members of the Social Butterfly Community. This app is built on a serverless architecture using React and Firebase Live Database.',
+      'This is a messenger app for keeping in touch with friends, family and new people! The app allows the user to create an account, search users by username and add new contacts. The public chat allows each user to communicate with other members of the Social Butterfly Community. This app is built with a serverless architecture using React and Firebase Live Database.',
     image: '/images/social-butterfly.png',
     tags: ['React.js', 'Firebase', 'Bootstrap', 'Heroku'],
     link: 'https://messenger-app-rsl.herokuapp.com',
@@ -11,7 +11,7 @@ export const projects = [
   },
   {
     title: 'RecipeBook',
-    description: `An online recipe book app that allows the user to view and save their favorite recipes. The application allows the user to create an account with a email address and password, add their personal recipes, view saved recipes, search for saved recipes and print the recipe in a book page format. It is a full-stack Heroku app built using Node.js, Express.js, Handlebars, Sequelize, Passport and Materialize.
+    description: `An online recipe book app that allows the user to view and save their favorite recipes. The application allows the user to create an account with a email address and password, add their personal recipes, view saved recipes, search for saved recipes and print the recipe in a book page format. It is a full-stack built by a team of three.
     `,
     image: '/images/recipe-book.png',
     tags: ['Node.js', 'MySQL', 'Handlebars', 'Materialize'],
