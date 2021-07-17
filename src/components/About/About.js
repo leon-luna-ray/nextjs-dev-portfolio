@@ -24,11 +24,8 @@ const About = () => {
       <SectionText>
         The reason I got into coding is because it allows me to constantly
         challenge myself to learn. I love to learn and I am always looking to
-        further expand my knowledge. Coding has inspired me to create new apps
-        that I personally find useful using the latest technologies. I am proud
-        that when I now have a problem that could be solved with a computer, I
-        can find a solution using ES6 JavaScript or my personal favorite:
-        React.js. I recently earned my certificate in full-stack development
+        further expand my knowledge and to learn the latest web development
+        technologies. I recently earned my certificate in full-stack development
         from the University of Oregon Coding Bootcamp.
       </SectionText>
       <SectionText>
