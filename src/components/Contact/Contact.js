@@ -9,7 +9,7 @@ const links = {
   github: 'https://github.com/leon-luna-ray',
   linkedin: 'https://www.linkedin.com/in/leon-luna-ray/',
   email: 'mailto:leon.luna.ray@gmail.com',
-  resume: './pdf/07-02-ray-luna-resume.pdf',
+  resume: './pdf/ray-luna-resume.pdf',
 };
 
 // Future steps to load the buttons dynamically
