@@ -22,7 +22,7 @@ export const projects = [
   {
     title: 'MadLibz',
     description:
-      'A whimsical web application which allows a user create their own MadLibz story by entering a set of words or generated randomly generated words based on part of speech! This app was built with jQuery and JavaScript incorporating two third-party word APIs.',
+      'A whimsical web application which lets the user create their own MadLibz story by entering a set of words or randomly generated words based on part of speech! This app was built with jQuery and JavaScript incorporating two third-party word APIs.',
     image: '/images/madlibz.png',
     tags: ['JavaScript', 'jQuery', 'HTML', 'CSS'],
     link: 'https://teammadlibz.github.io/MadLibz/',
@@ -32,7 +32,7 @@ export const projects = [
   {
     title: 'Eatdaburger',
     description:
-      'A fun burger ordering app! The user can order any burger they like. The burger will be saved in the burger queue and moved to the devoured side when the user clicks eat-da-burger! This is a full-stack Heroku app built with Node.js and Handlebars.',
+      'A fun burger ordering app! The user can order any burger they like. The burger will be saved in the burger queue and moved to the devoured side when the user clicks eat-da-burger! This is a full-stack Heroku app built with Node.js, MySQL and Handlebars.',
     image: '/images/eatdaburger.png',
     tags: ['Handlebars', 'MySQL', 'Node.Js', 'Express.js'],
     link: 'https://burger-app-rluna.herokuapp.com/',
