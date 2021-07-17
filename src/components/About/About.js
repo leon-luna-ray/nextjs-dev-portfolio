@@ -24,9 +24,9 @@ const About = () => {
       <SectionText>
         The reason I got into coding is because it allows me to constantly
         challenge myself to learn. I love to learn and I am always looking to
-        further expand my knowledge and to learn the latest web development
-        technologies. I recently earned my certificate in full-stack development
-        from the University of Oregon Coding Bootcamp.
+        further expand my knowledge by learning and implementing the latest web
+        development technologies. I recently earned my certificate in full-stack
+        development from the University of Oregon Coding Bootcamp.
       </SectionText>
       <SectionText>
         I am from Mexicali, Mexico. I grew up living in the Portland, Oregon
