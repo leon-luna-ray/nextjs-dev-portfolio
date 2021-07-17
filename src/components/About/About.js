@@ -29,9 +29,9 @@ const About = () => {
         development from the University of Oregon Coding Bootcamp.
       </SectionText>
       <SectionText>
-        I am from Mexicali, Mexico. I grew up living in the Portland, Oregon
-        Metro Area. My hobbies are camping, hiking, birdwatching, cooking,
-        language, travel and photography.
+        I am from Mexicali, Mexico and grew up in the Portland, Oregon Metro
+        Area. My hobbies are camping, hiking, birdwatching, cooking, language,
+        travel and photography.
       </SectionText>
       <br />
       <br />
