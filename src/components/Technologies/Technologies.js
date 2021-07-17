@@ -28,7 +28,7 @@ const Technologies = () => {
           <ListContainer>
             <CgWebsite size='3rem' />
             <br />
-            <ListTitle>Front End</ListTitle>
+            <ListTitle>Front-End</ListTitle>
             <ListParagraph>
               <ul className='skills-list'>
                 <li>HTML5</li>
@@ -44,7 +44,7 @@ const Technologies = () => {
           <ListContainer>
             <HiOutlineDatabase size='3rem' />
             <br />
-            <ListTitle>Back End</ListTitle>
+            <ListTitle>Back-End</ListTitle>
             <ListParagraph>
               <li>Node.js</li>
               <li>Express.js</li>
