@@ -33,7 +33,7 @@ const Technologies = () => {
               <ul className='skills-list'>
                 <li>HTML5</li>
                 <li>CSS3</li>
-                <li>JavaScript</li>
+                <li>JavaScript ES6</li>
                 <li>React.js</li>
                 <li>jQuery</li>
               </ul>
