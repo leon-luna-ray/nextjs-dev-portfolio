@@ -1,14 +1,34 @@
 export const projects = [
   {
-    title: 'Social Butterfly',
+    title: 'Audirie Pitch',
     description:
-      'This is a messenger app for keeping in touch with friends, family and new people! The app allows the user to create an account, search users by username and add new contacts. The public chat allows each user to communicate with other members of the Social Butterfly Community. This app is built with a serverless architecture using React and Firebase Live Database.',
-    image: '/images/social-butterfly.png',
-    tags: ['React.js', 'Firebase', 'Bootstrap', 'Heroku'],
-    link: 'https://messenger-app-rsl.herokuapp.com',
-    github: 'https://github.com/messenger-app-team/messenger-app',
+      'An application that allows a user to record an elevator pitch. The app will provide feedback in the form of various speech metrics and insights such as tone, filler words, confidence, and empathy. Worked extensively with the Recharts API to create visual representations of the user’s speech data. This project was built by a team of five developers for Audirie.com',
+    image: '/images/pitch.png',
+    tags: [
+      'React.js',
+      'Node.js',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'Bootstrap',
+      'Recharts',
+      'Figma',
+    ],
+    link: 'https://www.audirie.com/pitch',
+    github: 'https://github.com/Audirie',
     id: 0,
   },
+  {
+    title: 'Emoji Tracker',
+    description:
+      "A mood tracking app using emojis. The app will let the user click on how they're feeling and store a record of each emoji in the user's local storage. This will allow the user to keep track of their mood. This is a personal side project.",
+    image: '/images/emoji-tracker.png',
+    tags: ['React.js', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
+    link: 'https://emojitracker.app/',
+    github: 'https://github.com/leon-luna-ray/emoji-tracker',
+    id: 1,
+  },
+
   {
     title: 'RecipeBook',
     description: `An online recipe book app that allows the user to view and save their favorite recipes. The application allows the user to create an account with a email address and password, add their personal recipes, view saved recipes, search for saved recipes and print the recipe in a book page format. It is a full-stack built by a team of three.
@@ -17,7 +37,17 @@ export const projects = [
     tags: ['Node.js', 'MySQL', 'Handlebars', 'Materialize'],
     link: 'https://arcane-peak-55315.herokuapp.com/',
     github: 'https://github.com/kurtp23/recipe-book',
-    id: 1,
+    id: 2,
+  },
+  {
+    title: 'Social Butterfly',
+    description:
+      'This is a messenger app for keeping in touch with friends, family and new people! The app allows the user to create an account, search users by username and add new contacts. The public chat allows each user to communicate with other members of the Social Butterfly Community. This app is built with a serverless architecture using React and Firebase Live Database.',
+    image: '/images/social-butterfly.png',
+    tags: ['React.js', 'Firebase', 'Bootstrap', 'Heroku'],
+    link: 'https://messenger-app-rsl.herokuapp.com',
+    github: 'https://github.com/messenger-app-team/messenger-app',
+    id: 3,
   },
   {
     title: 'MadLibz',
@@ -27,7 +57,7 @@ export const projects = [
     tags: ['JavaScript', 'jQuery', 'HTML', 'CSS'],
     link: 'https://teammadlibz.github.io/MadLibz/',
     github: 'https://github.com/TeamMadLibz/MadLibz/',
-    id: 2,
+    id: 4,
   },
   {
     title: 'Eatdaburger',
@@ -37,26 +67,6 @@ export const projects = [
     tags: ['Handlebars', 'MySQL', 'Node.Js', 'Express.js'],
     link: 'https://burger-app-rluna.herokuapp.com/',
     github: 'https://github.com/leon-luna-ray/burgers-app',
-    id: 3,
-  },
-  {
-    title: 'Team Profile Generator',
-    description:
-      'A command line application for busy bosses to quickly render a styled team HTML page for quick access! The app will prompt the end-user for their contact information as well as their team data. Once complete the app will generate a team.html file in the output folder containing everyone on the team. The app is built with Node.js with a focus on testing using Jest.',
-    image: '/images/team-profile.png',
-    tags: ['Node.js', 'BulmaCSS', 'Inquirer', 'Jest'],
-    link: 'https://www.youtube.com/watch?v=_9L0reNTwvs',
-    github: 'https://github.com/leon-luna-ray/team-profile-generator',
-    id: 4,
-  },
-  {
-    title: 'Budget Tracker',
-    description:
-      'A progressive web app for tracking your budget while travelling and on the go. This app allows the user to enter and track expenses both online and offline. Offline storage is handled using a service worker file and manifest. The app will automatically update the NoSQL database as soon as the connection is restored. Built with a focus on testing using Jest.',
-    image: '/images/budget-tracker.png',
-    tags: ['Node.js', 'Express.js', 'Jest', 'MongoDB'],
-    link: 'https://budget-tracker-rluna.herokuapp.com/',
-    github: 'https://github.com/leon-luna-ray/budget-tracker/',
     id: 5,
   },
 ];
