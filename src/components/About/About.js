@@ -16,7 +16,7 @@ const About = () => {
       <br />
       <SectionText>
         {/* Personal profile image */}
-        <Img src='/images/ray-1x1.jpg' />
+        <Img src='/images/ruta1x1.jpg' alt='Ray Luna profile picture' />
         Hi I'm Ray! I am a Full-stack web developer. I use my skills to create
         useful human-centric web applications with an emphasis on ease of use
         and simple design.
@@ -25,13 +25,12 @@ const About = () => {
         The reason I got into coding is because it allows me to constantly
         challenge myself to learn. I love to learn and I am always looking to
         further expand my knowledge by learning and implementing the latest web
-        development technologies. I recently earned my certificate in full-stack
+        development technologies. I earned my certificate in full-stack
         development from the University of Oregon Coding Bootcamp.
       </SectionText>
       <SectionText>
-        I am from Mexicali, Mexico and grew up in the Portland, Oregon Metro
-        Area. My hobbies are camping, hiking, birdwatching, cooking, language,
-        travel and photography.
+        I am from the Portland, Oregon Metro Area. My hobbies are camping,
+        hiking, birdwatching, cooking, language, travel and photography.
       </SectionText>
       <br />
       <br />
