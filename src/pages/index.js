@@ -12,6 +12,7 @@ import { client } from './api/client';
 class Home extends React.Component {
   state = {
     content: null,
+    projects: null,
   };
 
   async componentDidMount() {
@@ -19,16 +20,21 @@ class Home extends React.Component {
       const content = await client.getEntries({
         content_type: 'portfolioHome',
       });
+      const projectContent = await client.getEntries({
+        content_type: 'portfolioProjectCard',
+      })
       this.setState({
         content: content.items[0].fields,
+        projects: projectContent.items
       });
     } catch (error) {
       console.log(error);
     }
   }
+
   render() {
-    console.log(this.state.content);
     if (this.state.content === null) {
+      // TODO Find different solution if content n/a with next js (SSR?)
       return <h1>Loading</h1>;
     }
     return (
@@ -41,7 +47,7 @@ class Home extends React.Component {
           />
           <BgAnimation />
         </Section>
-        <Projects />
+        <Projects projects={this.state.projects} />
         <Technologies />
         <About />
         <Contact />

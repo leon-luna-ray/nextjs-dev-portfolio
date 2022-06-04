@@ -18,9 +18,13 @@ import {
   SectionDivider,
   SectionTitle,
 } from '../../styles/GlobalComponents';
-import { projects } from '../../constants/constants';
 
-const Projects = () => {
+const Projects = ({ projects }) => {
+  // TODO Find a way to re-order projects
+  // Error handling
+  if (!projects) {
+    return '';
+  }
   return (
     <Section id='projects'>
       <br />
@@ -28,38 +32,45 @@ const Projects = () => {
       <br />
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>
-        {projects.map(
-          // de-structure project object to get needed properties
-          ({ title, description, image, tags, link, github, id }) => (
-            <BlogCard key={id} className='project-card'>
-              <Img src={image} />
-              <br />
-              <br />
-              <TitleContent>
-                <HeaderThree title>{title}</HeaderThree>
-                <Hr />
-              </TitleContent>
-              <CardInfo>{description}</CardInfo>
-              <br />
-              <div>
-                <TitleContent>Technologies</TitleContent>
-                <TagList>
-                  {tags.map((tag, i) => (
-                    <Tag key={i}>{tag}</Tag>
-                  ))}
-                </TagList>
-              </div>
-              <UtilityList>
-                <ExternalLinks href={link} target='_blank'>
-                  🚀 Launch
-                </ExternalLinks>
-                <ExternalLinks href={github} target='_blank'>
+        {projects.map(({ fields, sys }) => (
+          <BlogCard key={sys.id} className='project-card'>
+            <Img src={fields.image.fields.file.url} />
+            <br />
+            <br />
+            <TitleContent>
+              <HeaderThree title>{fields.title}</HeaderThree>
+              <Hr />
+            </TitleContent>
+            <CardInfo>{fields.description}</CardInfo>
+            <br />
+            <div>
+              {fields.technologies ? (
+                <div>
+                  <TitleContent>Technologies</TitleContent>
+                  <TagList>
+                    {fields.technologies.map((tag, i) => (
+                      <Tag key={i}>{tag}</Tag>
+                    ))}
+                  </TagList>
+                </div>
+              ) : (
+                ''
+              )}
+            </div>
+            <UtilityList>
+              <ExternalLinks href={fields.projectUrl} target='_blank'>
+                🚀 Launch
+              </ExternalLinks>
+              {fields.repositoryUrl ? (
+                <ExternalLinks href={fields.repositoryUrl} target='_blank'>
                   Code
                 </ExternalLinks>
-              </UtilityList>
-            </BlogCard>
-          )
-        )}
+              ) : (
+                ''
+              )}
+            </UtilityList>
+          </BlogCard>
+        ))}
       </GridContainer>
       <br />
       <br />
