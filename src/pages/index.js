@@ -13,6 +13,7 @@ class Home extends React.Component {
   state = {
     content: null,
     projectSection: null,
+    techSection: null,
   };
 
   async componentDidMount() {
@@ -21,11 +22,15 @@ class Home extends React.Component {
         content_type: 'portfolioHome',
       });
       const projectSection = await client.getEntry(
-        process.env.NEXT_PUBLIC_PAGE_ID_PROJECTS
+        process.env.NEXT_PUBLIC_SECTION_ID_PROJECTS
+      );
+      const techSection = await client.getEntry(
+        process.env.NEXT_PUBLIC_SECTION_ID_TECH
       );
       this.setState({
         content: content.items[0].fields,
         projectSection: projectSection.fields,
+        techSection: techSection.fields,
       });
     } catch (error) {
       console.log(error);
@@ -34,11 +39,12 @@ class Home extends React.Component {
 
   renderProjectSection() {
     if (this.state.projectSection === null) return;
-    return (
-      <Projects
-        content={this.state.projectSection}
-      />
-    );
+    return <Projects content={this.state.projectSection} />;
+  }
+
+  renderTechSection() {
+    if (this.state.techSection === null) return;
+    return <Technologies content={this.state.techSection} />;
   }
 
   render() {
@@ -57,7 +63,7 @@ class Home extends React.Component {
           <BgAnimation />
         </Section>
         {this.renderProjectSection()}
-        <Technologies />
+        {this.renderTechSection()}
         <About />
         <Contact />
       </Layout>
