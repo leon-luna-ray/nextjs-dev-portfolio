@@ -17,6 +17,7 @@ class Home extends React.Component {
     projectSection: null,
     techSection: null,
     aboutSection: null,
+    contactSection: null,
   };
 
   async componentDidMount() {
@@ -33,11 +34,15 @@ class Home extends React.Component {
       const aboutSection = await client.getEntry(
         process.env.NEXT_PUBLIC_SECTION_ID_ABOUT
       );
+      const contactSection = await client.getEntry(
+        process.env.NEXT_PUBLIC_SECTION_ID_CONTACT
+      );
       this.setState({
         content: content.items[0].fields,
         projectSection: projectSection.fields,
         techSection: techSection.fields,
         aboutSection: aboutSection.fields,
+        contactSection: contactSection.fields,
       });
     } catch (error) {
       console.log(error);
@@ -64,6 +69,11 @@ class Home extends React.Component {
     );
   }
 
+  renderContactSection() {
+    if (this.state.contactSection === null) return;
+    return <Contact content={this.state.contactSection} />;
+  }
+
   render() {
     if (this.state.content === null) {
       // TODO Find different solution if content n/a with next js (SSR?)
@@ -82,7 +92,7 @@ class Home extends React.Component {
         {this.renderProjectSection()}
         {this.renderTechSection()}
         {this.renderAboutSection()}
-        <Contact />
+        {this.renderContactSection()}
       </Layout>
     );
   }

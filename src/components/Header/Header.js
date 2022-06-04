@@ -40,6 +40,7 @@ const Header = () => {
           </Link>
         </li>
         <li>
+          {/* Todo Link not working */}
           <Link href='#about'>
             <NavLink>About</NavLink>
           </Link>

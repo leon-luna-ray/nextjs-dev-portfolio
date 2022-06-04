@@ -1,52 +1,49 @@
 import React from 'react';
-// icons for buttons
 import { AiFillGithub, AiFillLinkedin, AiTwotoneMail } from 'react-icons/ai';
 import { TiDocumentText } from 'react-icons/ti';
 import { Section, SectionTitle } from '../../styles/GlobalComponents';
 import { Box, Boxes, BoxText } from './ContactStyles';
 
-const links = {
-  github: 'https://github.com/leon-luna-ray',
-  linkedin: 'https://www.linkedin.com/in/leon-luna-ray/',
-  email: 'mailto:leon.luna.ray@gmail.com',
-  resume: './pdf/ray-luna-resume.pdf',
-};
+const Contact = ({ content }) => {
+  console.log(content);
 
-// Future steps to load the buttons dynamically
-const Contact = () => {
+  const contactCards = content.contactCards.map(({ fields, sys }) => {
+    if (fields.document) {
+      console.log('document found!');
+      return (
+        <a key={sys.id} href={fields.document.fields.file.url} target="_blank">
+          <Box id='github-box'>
+            <TiDocumentText size='5rem' />
+            <BoxText>{fields.service}</BoxText>
+            <BoxText>{fields.displayName}</BoxText>
+          </Box>
+        </a>
+      );
+    }
+
+    return (
+      <a key={sys.id} href={fields.link} target='_blank'>
+        <Box>
+          {fields.service === 'Github' ? (
+            <AiFillGithub size='5rem' />
+          ) : fields.service === 'Linkedin' ? (
+            <AiFillLinkedin size='5rem' />
+          ) : fields.service === 'Email' ? (
+            <AiTwotoneMail size='5rem' />
+          ) : (
+            ''
+          )}
+          <BoxText>{fields.service}</BoxText>
+          <BoxText>{fields.displayName}</BoxText>
+        </Box>
+      </a>
+    );
+  });
+
   return (
     <Section id='contact'>
-      <SectionTitle>Contact</SectionTitle>
-      <Boxes>
-        <a href={links.github} target='_blank'>
-          <Box id='github-box'>
-            <AiFillGithub size='5rem' />
-            <BoxText>Github</BoxText>
-            <BoxText>leon-luna-ray</BoxText>
-          </Box>
-        </a>
-        <a href={links.linkedin} target='_blank'>
-          <Box>
-            <AiFillLinkedin size='5rem' />
-            <BoxText>Linkedin</BoxText>
-            <BoxText>leon-luna-ray</BoxText>
-          </Box>
-        </a>
-        <a href={links.email} target='_blank'>
-          <Box>
-            <AiTwotoneMail size='5rem' />
-            <BoxText>Email</BoxText>
-            <BoxText>leon.luna.ray@gmail.com</BoxText>
-          </Box>
-        </a>
-        <a href={links.resume} download='ray-luna-resume'>
-          <Box>
-            <TiDocumentText size='5rem' />
-            <BoxText>Resume</BoxText>
-            <BoxText>Download</BoxText>
-          </Box>
-        </a>
-      </Boxes>
+      <SectionTitle>{content.title}</SectionTitle>
+      <Boxes>{contactCards}</Boxes>
       <br />
     </Section>
   );

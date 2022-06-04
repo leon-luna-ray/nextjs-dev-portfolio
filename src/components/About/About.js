@@ -10,8 +10,8 @@ import {
 } from '../../styles/GlobalComponents';
 
 const About = ({ content, parseHTML }) => {
+  // May need to refactor this later on due to console errors
   const body = documentToHtmlString(content.body);
-  console.log(body);
   return (
     <Section id='about'>
       <SectionTitle>About Me</SectionTitle>
