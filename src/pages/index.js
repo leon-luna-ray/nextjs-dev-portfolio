@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Contact from '../components/Contact/Contact';
 import BgAnimation from '../components/BackgroundAnimation/BackgroundAnimation';
 import Hero from '../components/Hero/Hero';
@@ -8,7 +7,6 @@ import Technologies from '../components/Technologies/Technologies';
 import About from '../components/About/About';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
-import { render } from 'react-dom';
 import { client } from './api/client';
 
 class Home extends React.Component {
@@ -19,21 +17,28 @@ class Home extends React.Component {
   async componentDidMount() {
     try {
       const content = await client.getEntries({
-        content_type: 'portfolioHomePage',
+        content_type: 'portfolioHome',
       });
-      console.log(content.items);
       this.setState({
-        content: content.items,
+        content: content.items[0].fields,
       });
     } catch (error) {
       console.log(error);
     }
   }
   render() {
+    console.log(this.state.content);
+    if (this.state.content === null) {
+      return <h1>Loading</h1>;
+    }
     return (
       <Layout>
         <Section grid>
-          <Hero />
+          <Hero
+            name={this.state.content.developerName.fields.name}
+            title={this.state.content.pageTitle}
+            intro={this.state.content.pageIntro}
+          />
           <BgAnimation />
         </Section>
         <Projects />

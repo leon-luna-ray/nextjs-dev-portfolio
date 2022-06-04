@@ -7,18 +7,15 @@ import {
 } from '../../styles/GlobalComponents';
 import { LeftSection } from './HeroStyles';
 
-const Hero = () => {
+const Hero = ({ name, title, intro }) => {
   return (
     <Section row nopadding>
       <LeftSection>
         <SectionTitle main center>
-          Ray Luna <br />
-          Developer Portfolio
+          {name} <br />
+          {title}
         </SectionTitle>
-        <SectionText>
-          I am a full-stack web developer creating useful human-centric web
-          applications with an emphasis on ease of use and simple design.
-        </SectionText>
+        <SectionText>{intro}</SectionText>
       </LeftSection>
     </Section>
   );
