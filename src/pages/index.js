@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Contact from '../components/Contact/Contact';
 import BgAnimation from '../components/BackgroundAnimation/BackgroundAnimation';
 import Hero from '../components/Hero/Hero';
@@ -13,6 +13,7 @@ class Home extends React.Component {
   state = {
     content: null,
     projects: null,
+    projectSection: null,
   };
 
   async componentDidMount() {
@@ -22,14 +23,29 @@ class Home extends React.Component {
       });
       const projectContent = await client.getEntries({
         content_type: 'portfolioProjectCard',
-      })
+      });
+      const projectSection = await client.getEntries({
+        content_type: 'portfolioProjects',
+      });
       this.setState({
         content: content.items[0].fields,
-        projects: projectContent.items
+        projects: projectContent.items,
+        // TODO: Change to specific entry IDs in contentful rather than first index (in case of multiple versions)
+        projectSection: projectSection.items[0].fields,
       });
     } catch (error) {
       console.log(error);
     }
+  }
+
+  renderProjectSection() {
+    if (this.state.projectSection === null) return;
+    return (
+      <Projects
+        content={this.state.projectSection}
+        projects={this.state.projects}
+      />
+    );
   }
 
   render() {
@@ -47,7 +63,7 @@ class Home extends React.Component {
           />
           <BgAnimation />
         </Section>
-        <Projects projects={this.state.projects} />
+        {this.renderProjectSection()}
         <Technologies />
         <About />
         <Contact />
