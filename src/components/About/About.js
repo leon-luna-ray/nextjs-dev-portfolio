@@ -1,5 +1,6 @@
 import React from 'react';
 import { Img } from './AboutStyles';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 import {
   Section,
@@ -8,29 +9,22 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 
-const About = () => {
+const About = ({ content, parseHTML }) => {
+  const body = documentToHtmlString(content.body);
+  console.log(body);
   return (
     <Section id='about'>
       <SectionTitle>About Me</SectionTitle>
       <br />
       <br />
-      <SectionText>
-        {/* Personal profile image */}
-        <Img src='/images/ruta1x1.jpg' alt='Ray Luna profile picture' />
-        Hi I'm Ray! I am a Full-stack web developer. I use my skills to create
-        useful human-centric web applications with an emphasis on ease of use
-        and simple design.
-      </SectionText>
-      <SectionText>
-        The reason I got into coding is because it allows me to constantly
-        challenge myself to learn. I love to learn and I am always looking to
-        further expand my knowledge by learning and implementing the latest web
-        development technologies. I earned my certificate in full-stack
-        development from the University of Oregon Coding Bootcamp.
-      </SectionText>
-      <SectionText>
-        I am from the Portland, Oregon Metro Area. My hobbies are camping,
-        hiking, birdwatching, cooking, language, travel and photography.
+      <SectionText className='about-richtext'>
+        {/* Optional Image */}
+        {content.image.fields ? (
+          <Img src={content.image.fields.file.url} alt={content.image.fields.description} />
+        ) : (
+          ''
+        )}
+        {parseHTML(body)}
       </SectionText>
       <br />
       <br />

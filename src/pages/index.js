@@ -8,12 +8,15 @@ import About from '../components/About/About';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 import { client } from './api/client';
+import parse from 'html-react-parser';
 
+// Todo Skip to main content
 class Home extends React.Component {
   state = {
     content: null,
     projectSection: null,
     techSection: null,
+    aboutSection: null,
   };
 
   async componentDidMount() {
@@ -27,14 +30,22 @@ class Home extends React.Component {
       const techSection = await client.getEntry(
         process.env.NEXT_PUBLIC_SECTION_ID_TECH
       );
+      const aboutSection = await client.getEntry(
+        process.env.NEXT_PUBLIC_SECTION_ID_ABOUT
+      );
       this.setState({
         content: content.items[0].fields,
         projectSection: projectSection.fields,
         techSection: techSection.fields,
+        aboutSection: aboutSection.fields,
       });
     } catch (error) {
       console.log(error);
     }
+  }
+
+  parseHTML(string) {
+    return parse(string);
   }
 
   renderProjectSection() {
@@ -45,6 +56,12 @@ class Home extends React.Component {
   renderTechSection() {
     if (this.state.techSection === null) return;
     return <Technologies content={this.state.techSection} />;
+  }
+  renderAboutSection() {
+    if (this.state.aboutSection === null) return;
+    return (
+      <About content={this.state.aboutSection} parseHTML={this.parseHTML} />
+    );
   }
 
   render() {
@@ -64,7 +81,7 @@ class Home extends React.Component {
         </Section>
         {this.renderProjectSection()}
         {this.renderTechSection()}
-        <About />
+        {this.renderAboutSection()}
         <Contact />
       </Layout>
     );
