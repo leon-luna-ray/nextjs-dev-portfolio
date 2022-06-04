@@ -38,7 +38,8 @@ Some of the nav links are sometimes not responsive when clicked repeatedly but t
 
 - Styling changes for mobile view
 - Add form to contact section
-- Implement Redux
+- Implement Global Props with Next
+- Server Side Rendering
 
 ## License
 
