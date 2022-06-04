@@ -12,7 +12,6 @@ import { client } from './api/client';
 class Home extends React.Component {
   state = {
     content: null,
-    projects: null,
     projectSection: null,
   };
 
@@ -21,17 +20,12 @@ class Home extends React.Component {
       const content = await client.getEntries({
         content_type: 'portfolioHome',
       });
-      const projectContent = await client.getEntries({
-        content_type: 'portfolioProjectCard',
-      });
-      const projectSection = await client.getEntries({
-        content_type: 'portfolioProjects',
-      });
+      const projectSection = await client.getEntry(
+        process.env.NEXT_PUBLIC_PAGE_ID_PROJECTS
+      );
       this.setState({
         content: content.items[0].fields,
-        projects: projectContent.items,
-        // TODO: Change to specific entry IDs in contentful rather than first index (in case of multiple versions)
-        projectSection: projectSection.items[0].fields,
+        projectSection: projectSection.fields,
       });
     } catch (error) {
       console.log(error);
@@ -43,7 +37,6 @@ class Home extends React.Component {
     return (
       <Projects
         content={this.state.projectSection}
-        projects={this.state.projects}
       />
     );
   }
