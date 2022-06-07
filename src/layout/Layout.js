@@ -1,13 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import Footer from '../components/Footer/Footer'
-import { Container } from './LayoutStyles'
+import { Container } from './LayoutStyles';
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
   return (
     <Container>
-     <main>{children}</main> 
-     <Footer/>
+      {children}
     </Container>
-  )
-}
+  );
+};

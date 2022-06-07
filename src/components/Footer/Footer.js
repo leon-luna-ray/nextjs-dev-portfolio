@@ -2,11 +2,15 @@ import React from 'react';
 
 import { FooterText, FooterWrapper } from './FooterStyles';
 
-const Footer = () => {
+const Footer = ({ name }) => {
   // Todo get date dynamically
+  const d = new Date();
+  let year = d.getFullYear();
   return (
     <FooterWrapper>
-      <FooterText>© Ray Luna 2021</FooterText>
+      <FooterText>
+        © {name} {year}
+      </FooterText>
     </FooterWrapper>
   );
 };

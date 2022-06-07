@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 import Contact from '../components/Contact/Contact';
 import BgAnimation from '../components/BackgroundAnimation/BackgroundAnimation';
 import Hero from '../components/Hero/Hero';
@@ -83,25 +84,33 @@ class Home extends React.Component {
     }
     return (
       <Layout>
-        <Header
-          name={this.state.content.developerName.fields.name}
-          projects={this.state.projectSection}
-          technologies={this.state.techSection}
-          about={this.state.aboutSection}
-          contact={this.state.contactSection}
-        />
-        <Section grid>
-          <Hero
+        <nav>
+          <Header
             name={this.state.content.developerName.fields.name}
-            title={this.state.content.pageTitle}
-            intro={this.state.content.pageIntro}
+            projects={this.state.projectSection}
+            technologies={this.state.techSection}
+            about={this.state.aboutSection}
+            contact={this.state.contactSection}
           />
-          <BgAnimation />
-        </Section>
-        {this.renderProjectSection()}
-        {/* {this.renderTechSection()} */}
-        {/* {this.renderAboutSection()} */}
-        {this.renderContactSection()}
+        </nav>
+        {/* TODO add skip to main content */}
+        <main>
+          <Section grid>
+            <Hero
+              name={this.state.content.developerName.fields.name}
+              title={this.state.content.pageTitle}
+              intro={this.state.content.pageIntro}
+            />
+            <BgAnimation />
+          </Section>
+          {this.renderProjectSection()}
+          {this.renderTechSection()}
+          {this.renderAboutSection()}
+          {this.renderContactSection()}
+        </main>
+        <footer>
+          <Footer name={this.state.content.developerName.fields.name} />
+        </footer>
       </Layout>
     );
   }
