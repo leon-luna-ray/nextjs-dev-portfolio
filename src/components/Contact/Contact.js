@@ -5,11 +5,9 @@ import { Section, SectionTitle } from '../../styles/GlobalComponents';
 import { Box, Boxes, BoxText } from './ContactStyles';
 
 const Contact = ({ content }) => {
-  console.log(content);
 
   const contactCards = content.contactCards.map(({ fields, sys }) => {
     if (fields.document) {
-      console.log('document found!');
       return (
         <a key={sys.id} href={fields.document.fields.file.url} target="_blank">
           <Box id='github-box'>

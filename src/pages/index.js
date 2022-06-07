@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header/Header';
 import Contact from '../components/Contact/Contact';
 import BgAnimation from '../components/BackgroundAnimation/BackgroundAnimation';
 import Hero from '../components/Hero/Hero';
@@ -22,9 +23,9 @@ class Home extends React.Component {
 
   async componentDidMount() {
     try {
-      const content = await client.getEntries({
-        content_type: 'portfolioHome',
-      });
+      const content = await client.getEntry(
+        process.env.NEXT_PUBLIC_SECTION_ID_HOME
+      );
       const projectSection = await client.getEntry(
         process.env.NEXT_PUBLIC_SECTION_ID_PROJECTS
       );
@@ -38,7 +39,7 @@ class Home extends React.Component {
         process.env.NEXT_PUBLIC_SECTION_ID_CONTACT
       );
       this.setState({
-        content: content.items[0].fields,
+        content: content.fields,
         projectSection: projectSection.fields,
         techSection: techSection.fields,
         aboutSection: aboutSection.fields,
@@ -77,10 +78,18 @@ class Home extends React.Component {
   render() {
     if (this.state.content === null) {
       // TODO Find different solution if content n/a with next js (SSR?)
-      return <h1>Loading</h1>;
+
+      return '';
     }
     return (
       <Layout>
+        <Header
+          name={this.state.content.developerName.fields.name}
+          projects={this.state.projectSection}
+          technologies={this.state.techSection}
+          about={this.state.aboutSection}
+          contact={this.state.contactSection}
+        />
         <Section grid>
           <Hero
             name={this.state.content.developerName.fields.name}
@@ -90,8 +99,8 @@ class Home extends React.Component {
           <BgAnimation />
         </Section>
         {this.renderProjectSection()}
-        {this.renderTechSection()}
-        {this.renderAboutSection()}
+        {/* {this.renderTechSection()} */}
+        {/* {this.renderAboutSection()} */}
         {this.renderContactSection()}
       </Layout>
     );

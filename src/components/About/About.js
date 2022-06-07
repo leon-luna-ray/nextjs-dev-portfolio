@@ -1,6 +1,7 @@
 import React from 'react';
 import { Img } from './AboutStyles';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 
 import {
   Section,
@@ -11,7 +12,8 @@ import {
 
 const About = ({ content, parseHTML }) => {
   // May need to refactor this later on due to console errors
-  const body = documentToHtmlString(content.body);
+  const body = documentToReactComponents(content.body)
+
   return (
     <Section id='about'>
       <SectionTitle>About Me</SectionTitle>
@@ -20,11 +22,14 @@ const About = ({ content, parseHTML }) => {
       <SectionText className='about-richtext'>
         {/* Optional Image */}
         {content.image.fields ? (
-          <Img src={content.image.fields.file.url} alt={content.image.fields.description} />
+          <Img
+            src={content.image.fields.file.url}
+            alt={content.image.fields.description}
+          />
         ) : (
           ''
         )}
-        {parseHTML(body)}
+        {body}
       </SectionText>
       <br />
       <br />
