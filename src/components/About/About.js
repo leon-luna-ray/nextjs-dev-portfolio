@@ -1,7 +1,7 @@
 import React from 'react';
 import { Img } from './AboutStyles';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import {
   Section,
@@ -12,7 +12,7 @@ import {
 
 const About = ({ content, parseHTML }) => {
   // May need to refactor this later on due to console errors
-  const body = documentToReactComponents(content.body)
+  const body = documentToReactComponents(content.body);
 
   return (
     <Section id='about'>

@@ -27,7 +27,7 @@ const Projects = ({ content }) => {
         <br />
         <br />
         <TitleContent>
-          <HeaderThree title>{fields.title}</HeaderThree>
+          <HeaderThree title={fields.title}>{fields.title}</HeaderThree>
           <Hr />
         </TitleContent>
         <CardInfo>{fields.description}</CardInfo>
