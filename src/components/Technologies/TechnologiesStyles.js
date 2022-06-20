@@ -58,7 +58,7 @@ export const ListTitle = styled.h4`
   }
 `;
 
-export const ListParagraph = styled.p`
+export const ListParagraph = styled.div`
   font-size: 18px;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.75);

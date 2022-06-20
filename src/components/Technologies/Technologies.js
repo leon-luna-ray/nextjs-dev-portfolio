@@ -16,61 +16,40 @@ import {
   ListTitle,
 } from './TechnologiesStyles';
 
-const Technologies = () => {
+const Technologies = ({ content }) => {
+  const techListItems = content.categories.map(({ fields, sys }) => {
+    const skillListItems = fields.skills.map((skill, index) => {
+      return <li key={index}>{skill}</li>;
+    });
+
+    return (
+      <ListItem key={sys.id}>
+        <ListContainer>
+          {/* Change icon based on specific category */}
+          {fields.title === 'Frontend' ? (
+            <CgWebsite size='3rem' />
+          ) : fields.title === 'Backend' ? (
+            <HiOutlineDatabase size='3rem' />
+          ) : fields.title === 'Tools' ? (
+            <FaCodeBranch size='3rem' />
+          ) : (
+            ''
+          )}
+          <br />
+          <ListTitle>{fields.title}</ListTitle>
+          <ListParagraph>
+            <ul className='skills-list'>{skillListItems}</ul>
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+    );
+  });
+
   return (
     <Section id='technologies'>
-      <SectionTitle>Technologies</SectionTitle>
-      <SectionText>
-        I create apps with a range of front-end and back-end technologies.
-      </SectionText>
-      <List>
-        <ListItem>
-          <ListContainer>
-            <CgWebsite size='3rem' />
-            <br />
-            <ListTitle>Front-End</ListTitle>
-            <ListParagraph>
-              <ul className='skills-list'>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript (ES6)</li>
-                <li>React.js</li>
-                <li>jQuery</li>
-              </ul>
-            </ListParagraph>
-          </ListContainer>
-        </ListItem>
-        <ListItem>
-          <ListContainer>
-            <HiOutlineDatabase size='3rem' />
-            <br />
-            <ListTitle>Back-End</ListTitle>
-            <ListParagraph>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>MySQL</li>
-              <li>MongoDB</li>
-              <li></li>
-            </ListParagraph>
-          </ListContainer>
-        </ListItem>
-        <ListItem>
-          <ListContainer>
-            <FaCodeBranch size='3rem' />
-            <br />
-            <ListTitle>Tools</ListTitle>
-            <ListParagraph>
-              <ul>
-                <li>Git</li>
-                <li>Bootstrap</li>
-                <li>Materialize</li>
-                <li>Firebase</li>
-                <li>Handlebars</li>
-              </ul>
-            </ListParagraph>
-          </ListContainer>
-        </ListItem>
-      </List>
+      <SectionTitle>{content.title}</SectionTitle>
+      <SectionText>{content.description}</SectionText>
+      <List>{techListItems}</List>
       <br />
       <br />
       <SectionDivider />

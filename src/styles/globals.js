@@ -31,6 +31,9 @@ const GlobalStyles = createGlobalStyle`
   li{
     list-style: none;
   }
+  .about-richtext p {
+    padding-bottom: 2rem;
+  }
 
 `;
 
