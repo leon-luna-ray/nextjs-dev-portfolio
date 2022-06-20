@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <Html lang='en-GB'>
+      <Html lang='en-US'>
         <Head>
           <link
             href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&family=Raleway:wght@200;300;400&display=swap'

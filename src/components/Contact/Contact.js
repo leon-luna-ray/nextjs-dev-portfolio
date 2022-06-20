@@ -6,7 +6,7 @@ import { Box, Boxes, BoxText } from './ContactStyles';
 
 const Contact = ({ content }) => {
 
-  const contactCards = content.contactCards.map(({ fields, sys }) => {
+  const contactCards = content.fields.contactCards.map(({ fields, sys }) => {
     if (fields.document) {
       return (
         <a key={sys.id} href={fields.document.fields.file.url} target="_blank">

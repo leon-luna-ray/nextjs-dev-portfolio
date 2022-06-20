@@ -12,108 +12,93 @@ import { Section } from '../styles/GlobalComponents';
 import { client } from './api/client';
 import parse from 'html-react-parser';
 
+export const getStaticProps = async () => {
+  const content = await client.getEntry(
+    process.env.NEXT_PUBLIC_SECTION_ID_HOME
+  );
+  const projectSection = await client.getEntry(
+    process.env.NEXT_PUBLIC_SECTION_ID_PROJECTS
+  );
+  const techSection = await client.getEntry(
+    process.env.NEXT_PUBLIC_SECTION_ID_TECH
+  );
+  const aboutSection = await client.getEntry(
+    process.env.NEXT_PUBLIC_SECTION_ID_ABOUT
+  );
+  const contactSection = await client.getEntry(
+    process.env.NEXT_PUBLIC_SECTION_ID_CONTACT
+  );
+
+  return {
+    props: {
+      content,
+      projectSection,
+      techSection,
+      aboutSection,
+      contactSection,
+    },
+  };
+};
+
 // Todo Skip to main content
-class Home extends React.Component {
-  state = {
-    content: null,
-    projectSection: null,
-    techSection: null,
-    aboutSection: null,
-    contactSection: null,
+const Home = ({
+  content,
+  projectSection,
+  techSection,
+  aboutSection,
+  contactSection,
+}) => {
+  const parseHTML = (string) => {
+    return parse(string);
   };
 
-  async componentDidMount() {
-    try {
-      const content = await client.getEntry(
-        process.env.NEXT_PUBLIC_SECTION_ID_HOME
-      );
-      const projectSection = await client.getEntry(
-        process.env.NEXT_PUBLIC_SECTION_ID_PROJECTS
-      );
-      const techSection = await client.getEntry(
-        process.env.NEXT_PUBLIC_SECTION_ID_TECH
-      );
-      const aboutSection = await client.getEntry(
-        process.env.NEXT_PUBLIC_SECTION_ID_ABOUT
-      );
-      const contactSection = await client.getEntry(
-        process.env.NEXT_PUBLIC_SECTION_ID_CONTACT
-      );
-      this.setState({
-        content: content.fields,
-        projectSection: projectSection.fields,
-        techSection: techSection.fields,
-        aboutSection: aboutSection.fields,
-        contactSection: contactSection.fields,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  const renderProjectSection = () => {
+    if (projectSection) return <Projects content={projectSection} />;
+  };
 
-  parseHTML(string) {
-    return parse(string);
-  }
+  const renderTechSection = () => {
+    if (techSection) return <Technologies content={techSection} />;
+  };
+  const renderAboutSection = () => {
+    if (aboutSection)
+      return <About content={aboutSection} parseHTML={parseHTML} />;
+  };
 
-  renderProjectSection() {
-    if (this.state.projectSection === null) return;
-    return <Projects content={this.state.projectSection} />;
-  }
+  const renderContactSection = () => {
+    if (contactSection) return <Contact content={contactSection} />;
+  };
 
-  renderTechSection() {
-    if (this.state.techSection === null) return;
-    return <Technologies content={this.state.techSection} />;
-  }
-  renderAboutSection() {
-    if (this.state.aboutSection === null) return;
-    return (
-      <About content={this.state.aboutSection} parseHTML={this.parseHTML} />
-    );
-  }
-
-  renderContactSection() {
-    if (this.state.contactSection === null) return;
-    return <Contact content={this.state.contactSection} />;
-  }
-
-  render() {
-    if (this.state.content === null) {
-      // TODO Find different solution if content n/a with next js (SSR?)
-
-      return '';
-    }
-    return (
-      <Layout>
-        <nav>
-          <Header
-            name={this.state.content.developerName.fields.name}
-            projects={this.state.projectSection}
-            technologies={this.state.techSection}
-            about={this.state.aboutSection}
-            contact={this.state.contactSection}
+  return (
+    <Layout>
+      <nav>
+        <Header
+          name={content.fields.developerName.fields.name}
+          projects={projectSection}
+          technologies={techSection}
+          about={aboutSection}
+          contact={contactSection}
+        />
+      </nav>
+      {/* TODO add skip to main content */}
+      <main>
+        <Section grid>
+          <Hero
+            name={content.fields.developerName.fields.name}
+            title={content.fields.pageTitle}
+            intro={content.fields.pageIntro}
           />
-        </nav>
-        {/* TODO add skip to main content */}
-        <main>
-          <Section grid>
-            <Hero
-              name={this.state.content.developerName.fields.name}
-              title={this.state.content.pageTitle}
-              intro={this.state.content.pageIntro}
-            />
-            <BgAnimation />
-          </Section>
-          {this.renderProjectSection()}
-          {this.renderTechSection()}
-          {this.renderAboutSection()}
-          {this.renderContactSection()}
-        </main>
-        <footer>
-          <Footer name={this.state.content.developerName.fields.name} />
-        </footer>
-      </Layout>
-    );
-  }
-}
+          <BgAnimation />
+        </Section>
+        {renderProjectSection()}
+        {renderTechSection()}
+        {renderAboutSection()}
+        {renderContactSection()}
+      </main>
+      <footer>
+        <Footer name={content.fields.developerName.fields.name} />
+      </footer>
+    </Layout>
+  );
+};
 
 export default Home;

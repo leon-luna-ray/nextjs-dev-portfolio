@@ -18,7 +18,7 @@ import {
 } from './HeaderStyles';
 
 const Header = ({ projects, technologies, about, contact, name }) => {
-  const contactIcons = contact.contactCards.map(({ fields, sys }) => {
+  const contactIcons = contact.fields.contactCards.map(({ fields, sys }) => {
     if (fields.service === 'Github') {
       return (
         <SocialIcons key={sys.id} href={fields.link} target='_blank'>
@@ -56,7 +56,7 @@ const Header = ({ projects, technologies, about, contact, name }) => {
         {projects ? (
           <li>
             <Link href='#projects'>
-              <NavLink>{projects.title}</NavLink>
+              <NavLink>{projects.fields.title}</NavLink>
             </Link>
           </li>
         ) : (
@@ -65,7 +65,7 @@ const Header = ({ projects, technologies, about, contact, name }) => {
         {technologies ? (
           <li>
             <Link href='#technologies'>
-              <NavLink>{technologies.title}</NavLink>
+              <NavLink>{technologies.fields.title}</NavLink>
             </Link>
           </li>
         ) : (
@@ -74,7 +74,7 @@ const Header = ({ projects, technologies, about, contact, name }) => {
         {about ? (
           <li>
             <Link href='#about'>
-              <NavLink>{about.title}</NavLink>
+              <NavLink>{about.fields.title}</NavLink>
             </Link>
           </li>
         ) : (
@@ -83,7 +83,7 @@ const Header = ({ projects, technologies, about, contact, name }) => {
         {contact ? (
           <li>
             <Link href='#contact'>
-              <NavLink>{contact.title}</NavLink>
+              <NavLink>{contact.fields.title}</NavLink>
             </Link>
           </li>
         ) : (

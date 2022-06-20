@@ -20,7 +20,7 @@ import {
 } from '../../styles/GlobalComponents';
 
 const Projects = ({ content }) => {
-  const renderedProjectCards = content.projectCards.map(({ fields, sys }) => {
+  const renderedProjectCards = content.fields.projectCards.map(({ fields, sys }) => {
     return (
       <BlogCard key={sys.id} className='project-card'>
         <Img src={fields.image.fields.file.url} />
