@@ -12,7 +12,7 @@ import {
 
 const About = ({ content, parseHTML }) => {
   // May need to refactor this later on due to console errors
-  const body = documentToReactComponents(content.body);
+  const body = documentToReactComponents(content.fields.body);
 
   return (
     <Section id='about'>
@@ -21,10 +21,10 @@ const About = ({ content, parseHTML }) => {
       <br />
       <SectionText className='about-richtext'>
         {/* Optional Image */}
-        {content.image.fields ? (
+        {content.fields.image.fields ? (
           <Img
-            src={content.image.fields.file.url}
-            alt={content.image.fields.description}
+            src={content.fields.image.fields.file.url}
+            alt={content.fields.image.fields.description}
           />
         ) : (
           ''
