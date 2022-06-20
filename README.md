@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my current web developer portfolio for my website [rayluna.me](https://www.rayluna.me). This portfolio is built with React.js and Next.js with theme by [JavaScript Mastery](https://github.com/adrianhajdin/portfolio_website). The app is deployed via Netlify. This is a one page layout that includes a collection of my best projects, tech skills, a bio and contact information with content coming from Contentful CMS API.
+This is my current web developer portfolio for my website [rayluna.me](https://www.rayluna.me). This portfolio is built with React.js and Next.js. The app is deployed via Netlify. This is a one page layout that includes a collection of my best projects, tech skills, a bio and contact information with content coming from Contentful CMS API and static rendering with Next.js.
 
 [🚀 Launch](https://www.rayluna.me)
 
@@ -32,14 +32,12 @@ This is my current web developer portfolio for my website [rayluna.me](https://w
 
 ## Known-Bugs
 
-Some of the nav links are sometimes not responsive when clicked repeatedly but they work after a few tries. Minor styling bugs on smaller screens.
+Minor styling bugs on smaller screens.
 
 ## Next-Steps
 
-- Styling changes for mobile view
+- Styling updates for mobile view
 - Add form to contact section
-- Implement Global Props with Next
-- Server Side Rendering
 
 ## License
 
