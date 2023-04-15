@@ -16,7 +16,22 @@ import {
   ListTitle,
 } from './TechnologiesStyles';
 
-const Technologies = ({ content }) => {
+const Technologies = ({ content, skills }) => {
+  const listItems = (items) => {
+    return items.map((item) => <li>{item.title}</li>);
+  };
+
+  const skillsList = skills.map((skill, index) => {
+    return (
+      <ListItem>
+        <ListContainer>
+        <ListTitle>{skill.title}</ListTitle>
+        <ul>{listItems(skill.skills)}</ul>
+        </ListContainer>
+      </ListItem>
+    );
+  });
+
   const techListItems = content.fields.categories.map(({ fields, sys }) => {
     const skillListItems = fields.skills.map((skill, index) => {
       return <li key={index}>{skill}</li>;
@@ -49,7 +64,7 @@ const Technologies = ({ content }) => {
     <Section id='technologies'>
       <SectionTitle>{content.title}</SectionTitle>
       <SectionText>{content.description}</SectionText>
-      <List>{techListItems}</List>
+      <List>{skillsList}</List>
       <br />
       <br />
       <SectionDivider />
