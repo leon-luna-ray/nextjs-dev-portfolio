@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my current web developer portfolio built with React.js and Next.js. The app is deployed via Netlify. This is a one page layout that includes a collection of my best projects, tech skills, a bio and contact information with content coming from Contentful CMS API and static rendering with Next.js.
+This is my current web developer portfolio built with React.js and Next.js. The app is deployed via Netlify. This is a one page layout that includes a collection of my best projects, tech skills, a bio and contact information. Content is pulled from Sanity.io CMS via API.
 
 ### Project URLs
 - [https://www.rayluna.me/](https://www.rayluna.me/)
@@ -25,13 +25,12 @@ This is my current web developer portfolio built with React.js and Next.js. The 
 
 ## Technologies
 
-- React.js
-- Next.js
-- Contentful
+- Javascript ES6
+- React.js 18
+- Next.js 13
+- CSS3
+- Sanity.io
 - Netlify
-- Javascript
-- Font Awesome
-- React-Icons
 
 ## Known-Bugs
 

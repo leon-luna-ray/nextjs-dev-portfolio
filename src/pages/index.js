@@ -34,6 +34,7 @@ export const getStaticProps = async () => {
   );
 
   const profile = await fetchProfile();
+  console.log(profile)
   const projects = await fetchFeaturedProjects();
   const skills = await fetchSkills();
 
@@ -58,6 +59,9 @@ const Home = ({
   techSection,
   aboutSection,
   contactSection,
+  profile,
+  projects,
+  skills,
 }) => {
   const parseHTML = (string) => {
     return parse(string);
@@ -72,7 +76,7 @@ const Home = ({
   };
   const renderAboutSection = () => {
     if (aboutSection)
-      return <About content={aboutSection} parseHTML={parseHTML} />;
+      return <About content={aboutSection} parseHTML={parseHTML} profile={profile}/>;
   };
 
   const renderContactSection = () => {

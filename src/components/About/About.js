@@ -1,7 +1,7 @@
 import React from 'react';
+import { getImageUrl } from '../../pages/api/sanity';
 import { Img } from './AboutStyles';
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 
 import {
   Section,
@@ -10,9 +10,8 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 
-const About = ({ content, parseHTML }) => {
-  // May need to refactor this later on due to console errors
-  const body = documentToReactComponents(content.fields.body);
+const About = ({ profile }) => {
+  const imageUrl = getImageUrl(profile.image).size(400, 400).url()
 
   return (
     <Section id='about'>
@@ -20,16 +19,8 @@ const About = ({ content, parseHTML }) => {
       <br />
       <br />
       <SectionText className='about-richtext'>
-        {/* Optional Image */}
-        {content.fields.image.fields ? (
-          <Img
-            src={content.fields.image.fields.file.url}
-            alt={content.fields.image.fields.description}
-          />
-        ) : (
-          ''
-        )}
-        {body}
+        {imageUrl ? <Img src={imageUrl} alt='Ray Luna'/> : ''}
+        {profile?.bio}
       </SectionText>
       <br />
       <br />
