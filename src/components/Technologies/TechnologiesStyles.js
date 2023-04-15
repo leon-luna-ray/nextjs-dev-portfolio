@@ -89,3 +89,11 @@ export const ListItem = styled.li`
     flex-direction: row;
   }
 `;
+
+export const ListLink = styled.a`
+  color: #FFFFFFBF;
+  ${ListItem}:hover & {
+    color: yellow;
+    text-decoration: underline;
+  }
+`;

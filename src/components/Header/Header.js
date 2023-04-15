@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 import {
   AiFillGithub,
   AiFillLinkedin,
   AiTwotoneMail,
   AiOutlineCode,
-} from 'react-icons/ai';
-
+} from "react-icons/ai";
+import { SlGlobe } from "react-icons/sl";
 import {
   Container,
   Div1,
@@ -15,82 +15,58 @@ import {
   NavLink,
   SocialIcons,
   Span,
-} from './HeaderStyles';
+} from "./HeaderStyles";
 
-const Header = ({ projects, technologies, about, contact, name }) => {
-  const contactIcons = contact.fields.contactCards.map(({ fields, sys }) => {
-    if (fields.service === 'Github') {
-      return (
-        <SocialIcons key={sys.id} href={fields.link} target='_blank'>
-          <AiFillGithub size='3rem' />
-        </SocialIcons>
-      );
-    }
-    if (fields.service === 'Linkedin') {
-      return (
-        <SocialIcons key={sys.id} href={fields.link} target='_blank'>
-          <AiFillLinkedin size='3rem' />
-        </SocialIcons>
-      );
-    }
-    if (fields.service === 'Email') {
-      return (
-        <SocialIcons key={sys.id} href={fields.link}>
-          <AiTwotoneMail size='3rem' />
-        </SocialIcons>
-      );
-    }
-    return;
-  });
-
+const Header = ({ profile }) => {
   return (
     <Container>
       <Div1>
-        <Link href='/'>
-          <a style={{ display: 'flex', alignItems: 'center', color: 'white' }}>
-            <AiOutlineCode size='4rem' /> <Span>{name}</Span>
-          </a>
+        <Link
+          href="/"
+          style={{ display: "flex", alignItems: "center", color: "white" }}
+        >
+          <AiOutlineCode size="4rem" /> <Span>{profile.name}</Span>
         </Link>
       </Div1>
       <Div2>
-        {projects ? (
-          <li>
-            <Link href='#projects'>
-              <NavLink>{projects.fields.title}</NavLink>
-            </Link>
-          </li>
-        ) : (
-          ''
-        )}
-        {technologies ? (
-          <li>
-            <Link href='#technologies'>
-              <NavLink>{technologies.fields.title}</NavLink>
-            </Link>
-          </li>
-        ) : (
-          ''
-        )}
-        {about ? (
-          <li>
-            <Link href='#about'>
-              <NavLink>{about.fields.title}</NavLink>
-            </Link>
-          </li>
-        ) : (
-          ''
-        )}
-        {contact ? (
-          <li>
-            <Link href='#contact'>
-              <NavLink>{contact.fields.title}</NavLink>
-            </Link>
-          </li>
-        ) : (
-          ''
-        )}
+        <li>
+          <Link href="#projects" legacyBehavior>
+            <NavLink>Projects</NavLink>
+          </Link>
+        </li>
+
+        <li>
+          <Link href="#technologies" legacyBehavior>
+            <NavLink>Skills</NavLink>
+          </Link>
+        </li>
+
+        <li>
+          <Link href="#about" legacyBehavior>
+            <NavLink>About</NavLink>
+          </Link>
+        </li>
+
+        <li>
+          <Link href="#contact" legacyBehavior>
+            <NavLink>Contact</NavLink>
+          </Link>
+        </li>
       </Div2>
-      <Div3>{contactIcons}</Div3>
+      <Div3>
+        <SocialIcons href={profile.github} target="_blank">
+          <AiFillGithub size="3rem" />
+        </SocialIcons>
+        <SocialIcons href={profile.linkedin} target="_blank">
+          <AiFillLinkedin size="3rem" />
+        </SocialIcons>
+        <SocialIcons href={`mailto:${profile.email}`}>
+          <AiTwotoneMail size="3rem" />
+        </SocialIcons>
+        <SocialIcons href={profile.website} target="_blank">
+          <SlGlobe size="3rem" />
+        </SocialIcons>
+      </Div3>
     </Container>
   );
 };

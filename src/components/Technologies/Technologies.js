@@ -1,55 +1,65 @@
-import React from 'react';
-import { FaCodeBranch } from 'react-icons/fa';
-import { CgWebsite } from 'react-icons/cg';
-import { HiOutlineDatabase } from 'react-icons/hi';
+import React from "react";
+import { FaCodeBranch } from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
+import { HiOutlineDatabase } from "react-icons/hi";
 import {
   Section,
   SectionDivider,
-  SectionText,
   SectionTitle,
-} from '../../styles/GlobalComponents';
+} from "../../styles/GlobalComponents";
 import {
   List,
   ListContainer,
   ListItem,
   ListParagraph,
   ListTitle,
-} from './TechnologiesStyles';
+  ListLink
+} from "./TechnologiesStyles";
 
-const Technologies = ({ content }) => {
-  const techListItems = content.fields.categories.map(({ fields, sys }) => {
-    const skillListItems = fields.skills.map((skill, index) => {
-      return <li key={index}>{skill}</li>;
+const Technologies = ({ skills }) => {
+  const listItems = (items) => {
+    return items.map((item) => {
+      if (item.website) {
+        return (
+          <ListItem key={item._id}>
+            <ListLink href={item.website} target="_blank">
+              {item.title}
+            </ListLink>
+          </ListItem>
+        );
+      }
+      return <li key={item._id}>{item.title}</li>;
     });
+  };
 
+  const skillsList = skills.map((skill) => {
     return (
-      <ListItem key={sys.id}>
+      <div key={skill._id}>
         <ListContainer>
-          {/* Change icon based on specific category */}
-          {fields.title === 'Frontend' ? (
-            <CgWebsite size='3rem' />
-          ) : fields.title === 'Backend' ? (
-            <HiOutlineDatabase size='3rem' />
-          ) : fields.title === 'Tools' ? (
-            <FaCodeBranch size='3rem' />
+          {skill.title === "Frontend" ? (
+            <CgWebsite size="3rem" />
+          ) : skill.title === "Backend" ? (
+            <HiOutlineDatabase size="3rem" />
+          ) : skill.title === "Tools" ? (
+            <FaCodeBranch size="3rem" />
           ) : (
-            ''
+            ""
           )}
           <br />
-          <ListTitle>{fields.title}</ListTitle>
+          <ListTitle>{skill.title}</ListTitle>
           <ListParagraph>
-            <ul className='skills-list'>{skillListItems}</ul>
+            <ul className="skills-list">{listItems(skill.skills)}</ul>
           </ListParagraph>
         </ListContainer>
-      </ListItem>
+      </div>
     );
   });
 
   return (
-    <Section id='technologies'>
-      <SectionTitle>{content.title}</SectionTitle>
-      <SectionText>{content.description}</SectionText>
-      <List>{techListItems}</List>
+    <Section id="technologies">
+      <SectionTitle>Development Skills</SectionTitle>
+      <br />
+      <List>{skillsList}</List>
       <br />
       <br />
       <SectionDivider />
