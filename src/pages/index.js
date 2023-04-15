@@ -1,4 +1,5 @@
 import React from 'react';
+import parse from 'html-react-parser';
 
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -10,25 +11,31 @@ import Technologies from '../components/Technologies/Technologies';
 import About from '../components/About/About';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
-import { client } from './api/client';
-import parse from 'html-react-parser';
+
+import { contentfulClient } from './api/client';
+import { fetchProfile, fetchFeaturedProjects, fetchSkills } from './api/sanity';
+
 
 export const getStaticProps = async () => {
-  const content = await client.getEntry(
+  const content = await contentfulClient.getEntry(
     process.env.NEXT_PUBLIC_SECTION_ID_HOME
   );
-  const projectSection = await client.getEntry(
+  const projectSection = await contentfulClient.getEntry(
     process.env.NEXT_PUBLIC_SECTION_ID_PROJECTS
   );
-  const techSection = await client.getEntry(
+  const techSection = await contentfulClient.getEntry(
     process.env.NEXT_PUBLIC_SECTION_ID_TECH
   );
-  const aboutSection = await client.getEntry(
+  const aboutSection = await contentfulClient.getEntry(
     process.env.NEXT_PUBLIC_SECTION_ID_ABOUT
   );
-  const contactSection = await client.getEntry(
+  const contactSection = await contentfulClient.getEntry(
     process.env.NEXT_PUBLIC_SECTION_ID_CONTACT
   );
+
+  const profile = await fetchProfile();
+  const projects = await fetchFeaturedProjects();
+  const skills = await fetchSkills();
 
   return {
     props: {
@@ -37,6 +44,9 @@ export const getStaticProps = async () => {
       techSection,
       aboutSection,
       contactSection,
+      profile,
+      projects,
+      skills,
     },
   };
 };
