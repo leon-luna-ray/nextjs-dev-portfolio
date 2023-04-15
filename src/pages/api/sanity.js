@@ -14,6 +14,14 @@ export function getImageUrl(source) {
   return builder.image(source);
 }
 
+export async function fetchGlobal() {
+  // Sanity queires are in the GROQ query language
+  const query = `*[_type == "global"]`;
+  const global = await client.fetch(query);
+
+  return global;
+}
+
 export async function fetchProfile() {
   // Sanity queires are in the GROQ query language
   const query = `*[_type == "profileDetails"][0]`;
