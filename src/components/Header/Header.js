@@ -46,16 +46,18 @@ const Header = ({ projects, technologies, about, contact, name }) => {
   return (
     <Container>
       <Div1>
-        <Link href='/'>
-          <a style={{ display: 'flex', alignItems: 'center', color: 'white' }}>
-            <AiOutlineCode size='4rem' /> <Span>{name}</Span>
-          </a>
+        <Link
+          href='/'
+          style={{ display: 'flex', alignItems: 'center', color: 'white' }}>
+
+          <AiOutlineCode size='4rem' /> <Span>{name}</Span>
+
         </Link>
       </Div1>
       <Div2>
         {projects ? (
           <li>
-            <Link href='#projects'>
+            <Link href='#projects' legacyBehavior>
               <NavLink>{projects.fields.title}</NavLink>
             </Link>
           </li>
@@ -64,7 +66,7 @@ const Header = ({ projects, technologies, about, contact, name }) => {
         )}
         {technologies ? (
           <li>
-            <Link href='#technologies'>
+            <Link href='#technologies' legacyBehavior>
               <NavLink>{technologies.fields.title}</NavLink>
             </Link>
           </li>
@@ -73,7 +75,7 @@ const Header = ({ projects, technologies, about, contact, name }) => {
         )}
         {about ? (
           <li>
-            <Link href='#about'>
+            <Link href='#about' legacyBehavior>
               <NavLink>{about.fields.title}</NavLink>
             </Link>
           </li>
@@ -82,7 +84,7 @@ const Header = ({ projects, technologies, about, contact, name }) => {
         )}
         {contact ? (
           <li>
-            <Link href='#contact'>
+            <Link href='#contact' legacyBehavior>
               <NavLink>{contact.fields.title}</NavLink>
             </Link>
           </li>
