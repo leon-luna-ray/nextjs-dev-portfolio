@@ -15,7 +15,7 @@ export function getImageUrl(source) {
 }
 
 export async function fetchGlobal() {
-  // Sanity queires are in the GROQ query language
+  // Sanity queries are in the GROQ query language
   const query = `*[_type == "globalSettings"][0]`;
   const global = await client.fetch(query);
 
@@ -23,7 +23,6 @@ export async function fetchGlobal() {
 }
 
 export async function fetchProfile() {
-  // Sanity queires are in the GROQ query language
   const query = `*[_type == "profileDetails"][0]`;
   const profile = await client.fetch(query);
 

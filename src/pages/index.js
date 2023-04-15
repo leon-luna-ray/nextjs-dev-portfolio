@@ -33,7 +33,6 @@ export const getStaticProps = async () => {
   };
 };
 
-// Todo Skip to main content
 const Home = ({ global, profile, projects, skills }) => {
   const renderProjectSection = () => {
     if (projects) return <Projects projects={projects} />;

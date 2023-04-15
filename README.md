@@ -8,43 +8,23 @@ This is my current web developer portfolio built with React.js and Next.js. The 
 - [https://www.rayluna.me/](https://www.rayluna.me/)
 - [https://nextjs-portfolio-rldev.netlify.app/](https://nextjs-portfolio-rldev.netlify.app/)
 
-
-## Table of Contents
-
-- [Image](#image)
-- [Technologies](#technologies)
-- [Known-Bugs](#known-bugs)
-- [Next-Steps](#next-steps)
-- [License](#license)
-- [Contact](#contact)
-- [Links](#links)
-
-## Image
-
-![Screenshot](./public/images/dev-portfolio.png)
+### Related Project
+- Dev CMS: [https://github.com/leon-luna-ray/dev-cms/](https://github.com/leon-luna-ray/dev-cms/)
 
 ## Technologies
 
 - Javascript ES6
 - React.js 18
 - Next.js 13
+- Styled Components
 - CSS3
 - Sanity.io
+- GROQ
 - Netlify
 
-## Known-Bugs
+## Image
 
-Minor styling bugs on smaller screens.
-
-## Next-Steps
-
-- Styling updates for mobile view
-- Add form to contact section
-
-## License
-
-This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Screenshot](./public/images/dev-portfolio.png)
 
 ## Contact
 
@@ -54,9 +34,3 @@ If you have any questions about the repo, open an issue or contact me directly a
 
 - E-Mail: leon.luna.ray@gmail.com
 - GitHub: [leon-luna-ray](https://github.com/leon-luna-ray)
-
-## Links
-
-- [Deployed Project](https://rluna-dev-portfolio.netlify.app/)
-
-- [Project Repository](https://github.com/leon-luna-ray/readme-generator)
