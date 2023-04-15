@@ -5,7 +5,6 @@ import { HiOutlineDatabase } from 'react-icons/hi';
 import {
   Section,
   SectionDivider,
-  SectionText,
   SectionTitle,
 } from '../../styles/GlobalComponents';
 import {
@@ -16,44 +15,28 @@ import {
   ListTitle,
 } from './TechnologiesStyles';
 
-const Technologies = ({ content, skills }) => {
+const Technologies = ({ skills }) => {
   const listItems = (items) => {
-    return items.map((item) => <li>{item.title}</li>);
+    return items.map((item) => <li key={item._id}>{item.title}</li>);
   };
 
-  const skillsList = skills.map((skill, index) => {
+  const skillsList = skills.map((skill) => {
     return (
-      <ListItem>
+      <ListItem key={skill._id}>
         <ListContainer>
-        <ListTitle>{skill.title}</ListTitle>
-        <ul>{listItems(skill.skills)}</ul>
-        </ListContainer>
-      </ListItem>
-    );
-  });
-
-  const techListItems = content.fields.categories.map(({ fields, sys }) => {
-    const skillListItems = fields.skills.map((skill, index) => {
-      return <li key={index}>{skill}</li>;
-    });
-
-    return (
-      <ListItem key={sys.id}>
-        <ListContainer>
-          {/* Change icon based on specific category */}
-          {fields.title === 'Frontend' ? (
+        {skill.title === 'Frontend' ? (
             <CgWebsite size='3rem' />
-          ) : fields.title === 'Backend' ? (
+          ) : skill.title === 'Backend' ? (
             <HiOutlineDatabase size='3rem' />
-          ) : fields.title === 'Tools' ? (
+          ) : skill.title === 'Tools' ? (
             <FaCodeBranch size='3rem' />
           ) : (
             ''
           )}
-          <br />
-          <ListTitle>{fields.title}</ListTitle>
+          <br/>
+          <ListTitle>{skill.title}</ListTitle>
           <ListParagraph>
-            <ul className='skills-list'>{skillListItems}</ul>
+            <ul className="skills-list">{listItems(skill.skills)}</ul>
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -62,8 +45,8 @@ const Technologies = ({ content, skills }) => {
 
   return (
     <Section id='technologies'>
-      <SectionTitle>{content.title}</SectionTitle>
-      <SectionText>{content.description}</SectionText>
+      <SectionTitle>Development Skills</SectionTitle>
+      <br/>
       <List>{skillsList}</List>
       <br />
       <br />

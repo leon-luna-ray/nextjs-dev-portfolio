@@ -37,7 +37,7 @@ export async function fetchFeaturedProjects() {
 }
 
 export async function fetchSkills() {
-  const query = `*[_type == "skillsList"] | order(title) {title, "skills" : skills[] -> {title, website}}`;
+  const query = `*[_type == "skillsList"] | order(title) {_id, title, "skills" : skills[] -> {_id, title, website}}`;
   const skills = await client.fetch(query);
 
   return skills;
