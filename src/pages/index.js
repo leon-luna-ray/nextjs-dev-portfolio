@@ -62,12 +62,8 @@ const Home = ({
   projects,
   skills,
 }) => {
-  const parseHTML = (string) => {
-    return parse(string);
-  };
-
   const renderProjectSection = () => {
-    if (projectSection) return <Projects content={projectSection} />;
+    if (projects) return <Projects projects={projects} />;
   };
 
   const renderTechSection = () => {
@@ -78,7 +74,7 @@ const Home = ({
   };
 
   const renderContactSection = () => {
-    if (profile) return <Contact profile={profile} content={contactSection} />;
+    if (profile) return <Contact profile={profile} />;
   };
 
   return (
@@ -92,7 +88,6 @@ const Home = ({
           contact={contactSection}
         />
       </nav>
-      {/* TODO add skip to main content */}
       <main>
         <Section grid>
           <Hero

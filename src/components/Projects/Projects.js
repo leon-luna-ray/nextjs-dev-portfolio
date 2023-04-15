@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImageUrl } from '../../pages/api/sanity';
 
 import {
   BlogCard,
@@ -19,26 +20,30 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 
-const Projects = ({ content }) => {
-  const renderedProjectCards = content.fields.projectCards.map(({ fields, sys }) => {
+const Projects = ({ projects }) => {
+  const getThumbnailUrl = (image) => {
+    return getImageUrl(image).size(400, 400).url();
+  }
+
+  const mapProjectCards = projects.map(project => {
     return (
-      <BlogCard key={sys.id} className='project-card'>
-        <Img src={fields.image.fields.file.url} />
+      <BlogCard key={project._id} className='project-card'>
+        <Img src={getThumbnailUrl(project.mainImage)} />
         <br />
         <br />
         <TitleContent>
-          <HeaderThree title={fields.title}>{fields.title}</HeaderThree>
+          <HeaderThree title={project.title}>{project.title}</HeaderThree>
           <Hr />
         </TitleContent>
-        <CardInfo>{fields.description}</CardInfo>
+        <CardInfo>{project.description[0].children[0].text}</CardInfo>
         <br />
         <div>
-          {fields.technologies ? (
+          {project.technologies.length ? (
             <div>
               <TitleContent>Technologies</TitleContent>
               <TagList>
-                {fields.technologies.map((tag, i) => (
-                  <Tag key={i}>{tag}</Tag>
+                {project.technologies.map((item) => (
+                  <Tag key={item._id}>{item.title}</Tag>
                 ))}
               </TagList>
             </div>
@@ -47,11 +52,11 @@ const Projects = ({ content }) => {
           )}
         </div>
         <UtilityList>
-          <ExternalLinks href={fields.projectUrl} target='_blank'>
+          <ExternalLinks href={project.url} target='_blank'>
             🚀 Launch
           </ExternalLinks>
-          {fields.repositoryUrl ? (
-            <ExternalLinks href={fields.repositoryUrl} target='_blank'>
+          {project.repository ? (
+            <ExternalLinks href={project.repository} target='_blank'>
               Code
             </ExternalLinks>
           ) : (
@@ -67,8 +72,8 @@ const Projects = ({ content }) => {
       <br />
       <SectionDivider />
       <br />
-      <SectionTitle main>{content.title}</SectionTitle>
-      <GridContainer>{renderedProjectCards}</GridContainer>
+      <SectionTitle main>Projects</SectionTitle>
+      <GridContainer>{mapProjectCards}</GridContainer>
       <br />
       <br />
       <SectionDivider />
