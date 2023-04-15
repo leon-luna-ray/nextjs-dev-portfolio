@@ -13,6 +13,7 @@ import {
   ListItem,
   ListParagraph,
   ListTitle,
+  ListLink
 } from "./TechnologiesStyles";
 
 const Technologies = ({ skills }) => {
@@ -20,11 +21,11 @@ const Technologies = ({ skills }) => {
     return items.map((item) => {
       if (item.website) {
         return (
-          <li key={item._id}>
-            <a href={item.website} target="_blank">
+          <ListItem key={item._id}>
+            <ListLink href={item.website} target="_blank">
               {item.title}
-            </a>
-          </li>
+            </ListLink>
+          </ListItem>
         );
       }
       return <li key={item._id}>{item.title}</li>;
@@ -33,7 +34,7 @@ const Technologies = ({ skills }) => {
 
   const skillsList = skills.map((skill) => {
     return (
-      <ListItem key={skill._id}>
+      <div key={skill._id}>
         <ListContainer>
           {skill.title === "Frontend" ? (
             <CgWebsite size="3rem" />
@@ -50,7 +51,7 @@ const Technologies = ({ skills }) => {
             <ul className="skills-list">{listItems(skill.skills)}</ul>
           </ListParagraph>
         </ListContainer>
-      </ListItem>
+      </div>
     );
   });
 
