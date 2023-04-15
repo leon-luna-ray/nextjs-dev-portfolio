@@ -71,14 +71,14 @@ const Home = ({
   };
 
   const renderTechSection = () => {
-    if (techSection) return <Technologies content={techSection} skills={skills}/>;
+    if (skills) return <Technologies skills={skills}/>;
   };
   const renderAboutSection = () => {
     if (profile) return <About profile={profile}/>;
   };
 
   const renderContactSection = () => {
-    if (contactSection) return <Contact content={contactSection} />;
+    if (profile) return <Contact profile={profile} content={contactSection} />;
   };
 
   return (
