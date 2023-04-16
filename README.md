@@ -6,7 +6,7 @@ This is my current web developer portfolio built with React.js and Next.js. The 
 
 ### Project URLs
 - [https://www.rayluna.me/](https://www.rayluna.me/)
-- [https://nextjs-portfolio-rldev.netlify.app/](https://nextjs-portfolio-rldev.netlify.app/)
+- [https://nextjs-portfolio-rldev.vercel.app/](https://nextjs-portfolio-rldev.vercel.app/)
 
 ### Related Project
 - Dev CMS: [https://github.com/leon-luna-ray/dev-cms/](https://github.com/leon-luna-ray/dev-cms/)
