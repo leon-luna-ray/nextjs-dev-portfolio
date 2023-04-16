@@ -20,7 +20,7 @@ This is my current web developer portfolio built with React.js and Next.js. The 
 - CSS3
 - Sanity.io
 - GROQ
-- Netlify
+- Vercel
 
 ## Image
 
