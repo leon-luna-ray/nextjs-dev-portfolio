@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my current web developer portfolio built with React.js and Next.js. The app is deployed via Netlify. This is a one page layout that includes a collection of my best projects, tech skills, a bio and contact information. Content is pulled from Sanity.io CMS via API.
+This is my current web developer portfolio built with React.js 18 and Next.js 13, deployed on Vercel. This is a one page layout that includes a collection of my best projects, tech skills, a bio and contact information. Content is pulled from Sanity.io CMS via API.
 
 ### Project URLs
 - [https://www.rayluna.me/](https://www.rayluna.me/)
