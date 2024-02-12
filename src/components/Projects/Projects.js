@@ -35,7 +35,7 @@ const Projects = ({ projects }) => {
           <HeaderThree title={project.title}>{project.title}</HeaderThree>
           <Hr />
         </TitleContent>
-        <CardInfo>{project.description[0].children[0].text}</CardInfo>
+        <CardInfo>{project.intro}</CardInfo>
         <br />
         <div>
           {project.technologies.length ? (
