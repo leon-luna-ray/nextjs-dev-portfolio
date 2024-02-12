@@ -28,7 +28,7 @@ const Projects = ({ projects }) => {
   const mapProjectCards = projects.map(project => {
     return (
       <BlogCard key={project._id} className='project-card'>
-        <Img src={getThumbnailUrl(project.mainImage)} />
+        <Img src={getThumbnailUrl(project.mainImage)} alt={project.mainImage.altText || 'Project Screenshot'} />
         <br />
         <br />
         <TitleContent>
