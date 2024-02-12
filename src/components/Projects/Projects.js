@@ -28,14 +28,14 @@ const Projects = ({ projects }) => {
   const mapProjectCards = projects.map(project => {
     return (
       <BlogCard key={project._id} className='project-card'>
-        <Img src={getThumbnailUrl(project.mainImage)} />
+        <Img src={getThumbnailUrl(project.mainImage)} alt={project.mainImage.altText || 'Project Screenshot'} />
         <br />
         <br />
         <TitleContent>
           <HeaderThree title={project.title}>{project.title}</HeaderThree>
           <Hr />
         </TitleContent>
-        <CardInfo>{project.description[0].children[0].text}</CardInfo>
+        <CardInfo>{project.intro}</CardInfo>
         <br />
         <div>
           {project.technologies.length ? (

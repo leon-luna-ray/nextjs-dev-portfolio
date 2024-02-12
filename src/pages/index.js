@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  fetchProfile,
-  fetchFeaturedProjects,
-  fetchSkills,
-  fetchGlobal,
+  fetchHomePage,
 } from "./api/sanity";
+import {PortableText} from '@portabletext/react'
 
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
@@ -18,10 +16,12 @@ import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents";
 
 export const getStaticProps = async () => {
-  const global = await fetchGlobal();
-  const profile = await fetchProfile();
-  const projects = await fetchFeaturedProjects();
-  const skills = await fetchSkills();
+  const data = await fetchHomePage();
+
+  const global = data.global
+  const profile = data.profile;;
+  const projects = data.projects.projects || [];
+  const skills = data.skillsGroups;
 
   return {
     props: {
@@ -33,9 +33,14 @@ export const getStaticProps = async () => {
   };
 };
 
-const Home = ({ global, profile, projects, skills }) => {
+const Home = ({ data, global, profile, projects, skills }) => {
   const renderProjectSection = () => {
-    if (projects) return <Projects projects={projects} />;
+    if (projects) return (
+      <div className="flex-col-1">
+        {/* <PortableText value={data?.projects.description} /> */}
+        <Projects projects={projects} />
+      </div>
+    )
   };
 
   const renderTechSection = () => {

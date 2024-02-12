@@ -19,7 +19,7 @@ const About = ({ profile }) => {
       <br />
       <br />
       <SectionText className='about-richtext'>
-        {imageUrl ? <Img src={imageUrl} alt='Ray Luna'/> : ''}
+        {imageUrl ? <Img src={imageUrl} alt={profile.image.altText || 'Profile Image'}/> : ''}
         {profile?.bio}
       </SectionText>
       <br />
